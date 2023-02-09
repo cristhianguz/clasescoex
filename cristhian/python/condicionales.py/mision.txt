@@ -1,0 +1,49 @@
+notaexamen1=float(input('digite la primera nota del examen '))
+notaexamen2=float(input('digite la segunda nota del examen '))
+notaexamen3=float(input('digite la tercer nota del examen '))
+notatrabajo1=float(input('digite la primer nota de trabajo '))
+notratrabajo2=float(input('digite la segunda nota trabajo '))
+notaexamenf=float(input('digita la nota del examen '))
+notaautoevaluacion=float(input('ingrese su autoevaluacion '))
+notaheteroevaluacion=float(input('indique su heteroevaluacion '))
+pe=0
+pet=0
+pt=0
+ptt=0
+peft=0
+pah=0
+pahf=0
+pnf=0
+if notaexamen1>0 and notaexamen1<5 and notaexamen2>0 and notaexamen2<5 and notaexamen3>0 and notaexamen3<5:
+    pe=(notaexamen1+notaexamen2+notaexamen3)/3
+    pet=pe*0.55
+    print('su nota de examenes es de {pe} que equibale a {pet} ')
+elif notatrabajo1>0 and notatrabajo1<5 and notratrabajo2>0 and notratrabajo2<5:
+    pt=(notatrabajo1+notratrabajo2)/2
+    ptt=pt*0.15
+    print('su nota de trabajos es de {pt} lo que equivale a {ptt} ')
+elif notaexamenf>0 and notaexamenf<5:
+    notaexamenf=0
+    peft=notaexamenf*0.20
+    print('su nota de examen final es de {notaexamenf} lo que equivale a {peft} ')
+elif notaautoevaluacion>0 and notaautoevaluacion<5 and notaheteroevaluacion>0 and notaheteroevaluacion<5:
+    pah=(notaautoevaluacion+notaheteroevaluacion)/2
+    pahf=pah*0.10
+    print('su nota de promedio de autoevaluacion y heteroevaluacion es de {pah} lo que equivale a {pahf} ')
+elif pnf>=0 and pnf<=1.9 and pnf>=2 and pnf<=2.9 and pnf>=3 and pnf<=3.9 and pnf>=4 and pnf<=4.6 and pnf>=4.7 and pnf<=5:
+    pnf=(pe+pt+notaexamenf+pah)/4
+    if pnf<=1.9:
+        print('no aprovo tu nota es{pnf} por lo cual tu nivel es MUY BAJO ')
+    elif pnf>=2 and pnf<=2.9:
+        print('no aprovo tu nota es{pnf} por lo cual tu nivel es BAJO ')
+    elif pnf>=3 and pnf<=3.9:
+        print('aprobaste tu nota es{pnf} por lo cual tu nivel es BASICO ')
+    elif pnf>=4 and pnf<=4.6:
+        print('aprobaste tu nota es {pnf} por lo cual tu nivel es ALTO ')
+    elif pnf>=4.7 and pnf<=5:
+        print('aprobaste tu nota es {pnf} por lo cual tu nivel es SUPERIOR ')
+    
+
+
+
+

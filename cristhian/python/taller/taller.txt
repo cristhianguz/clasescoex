@@ -1,0 +1,85 @@
+print('punto numero 1')
+'''a=2
+b=5
+c=1
+punto1=3*a-4*b/a**2
+punto2=(((b+c)/2*a+10)*3*b)-6
+print(f'respuesta numero1 {punto1} \n respuesta numero2 {punto2}')'''
+
+print('punto numero 2')
+
+'''inversion=float(input('digite el valor de la inversion '))
+ganancia=inversion*1.012
+print(f'ganacia mensual {ganancia}')'''
+
+print('punto numero 3')
+
+'''base=float(input('Digita la base del triangulo '))
+altura=float(input('Digita la altura del triangulo '))
+area=base*altura/2
+print(f'el areal del triangulo es {area}')'''
+
+print('punto numero 4')
+
+'''totalmonto=float(input('digite el valor del monto '))
+auto=int(input('digite cantidad de autos vendidos '))
+comision=170000*auto
+salario=980000
+valorventa=(totalmonto*0.5)
+total=salario+comision+valorventa
+print(f'suelto total ganado al mes {total}')'''
+
+print('punto numero 5 ')
+
+'''nota1=float(input('ingrese nota de menor promedio calificado '))
+nota2=float(input('ingrese nota de menor promedio calificado '))
+nota3=float(input('ingrese nota de mayor promedio calificado '))
+nota4=float(input('ingrese nota de mayor promedio calificado '))
+promedio1=(nota1+nota2)/2*0.40
+promedio2=(nota3+nota4)/2*0.60
+total=promedio1+promedio2
+print(f'promedio final {total}')'''
+
+print('punto numero 6 ')
+
+'''edad=int(input('que edad tiene el pasiente'))
+np=(220-edad)/10
+print(f'la cantidad de pulsasiones deberia ser {np}')'''
+
+print('punto numero 7 ')
+
+'''sueldo=int(input('digite el valor del sueldo mensual'))
+tv=int(input('digite el valor de la cantidad de ventas realizadas '))
+cv=(tv*0.10)
+totalmes=(sueldo+cv)
+print(f'comision ganada al mes {cv} \n total ganado al mes {totalmes}')'''
+
+print('punto nuemro 8')
+
+'''mat1=float(input('digite nota optenida en el examen '))
+mat2=float(input('digite nota optenida en la primera tarea '))
+mat3=float(input('digite nota optenida en la segunda tarea '))
+mat4=float(input('digite nota optenida en la tercera tarea '))
+promat1=mat1*0.90
+promat2=(mat2+mat3+mat4)/3*0.10
+promediomat=(promat1+promat2)
+fis1=float(input('digite nota optenida en el examen '))
+fis2=float(input('digite nota optenida en la primera tarea '))
+fis3=float(input('digite nota optenida en la segunda tarea '))
+profis1=fis1*0.80
+profis2=(fis2+fis3)/2*0.20
+promediofis=(promat1+promat2)
+quim1=float(input('digite nota optenida en el examen '))
+quim2=float(input('digite nota optenida en la primera tarea '))
+quim3=float(input('digite nota optenida en la segunda tarea '))
+quim4=float(input('digite nota optenida en la tercera tarea '))
+proquim1=quim1*0.85
+proquim2=(quim2+quim3+quim4)/3*0.15
+promedioquim=(proquim1+proquim2)
+promediogeneral=(promediomat+promediofis+promedioquim)/3
+print(f'promedio matematicas es {promediomat} \n promedio fisica es {promediofis} \n promedio quimica es {promedioquim} \n promedio general es {promediogeneral}')'''
+
+
+
+
+

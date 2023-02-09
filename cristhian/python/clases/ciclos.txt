@@ -1,0 +1,433 @@
+'''
+ESTRUCTURAS CÍCLICAS
+BUCLES - LOOPS - CICLOS REPETITIVOS
+Los bucloes permiten repetir un bloque de código una cantidad de veces
+
+Los ciclos repetitivos están compuestos por 3 elementos
+La inicialización, la evaluación y la actualización.
+
+CICLO FOR
+Para hacer uso del ciclo for en Python, utilizamos un range que es una lista inmutable de números enteros en sucesión aritmética.
+
+Un range se crea llamando al tipo de datos con uno, dos o tres argumentos numéricos.
+
+Una sucesión artimética es una sucesión en la que la diferencia entre dos términos consecutivos es siempre la misma.
+
+El tipo range() con un único argumento se escribe range(n) y crea una lista inmutable de n números enteros consecutivos que empieza en 0 y acaba en n-1
+x=range(5) =>crea la secuencia (0,1,2,3,4)
+
+El tipo range con dos argumentos se escribe range(m, n) y crea una lista inmutable de enteros consecutivos que empieza en m y acaba en n-1.
+x=range(1,5) =>crea la secuencia (1,2,3,4)
+
+El tipo range con tres argumentos se escribe range(m, n, p) y crea una lista inmutable de enteros que empieza en m y acaba justo antes de superar o igualar a n, aumentando los valores de p en p. Si p es negativo, los valores van disminuyendo de p en p.
+x=range(0,10,2) => crea la secuencia (0,2,4,6,8)
+x=range(10,0,-2) => crea la secuencia (10,8,6,4,2)
+
+El ciclo for es utilizado principalmente para ciclos en los que conocemos cuantas veces debe realizar una tarea, ya sea en el momento en que se crea el algoritmo o por un valor dado por el usuario.
+
+Sintaxis
+for i in range():
+    instrucciones del bloque for
+
+la palabra for, es una palabra reservada.
+la variable i, es muy común en los ciclos for, pero puede recibir otros nombres
+in es una palabra reservada, utilizada por el ciclo para realizar la EVALUACIÓN con el contenido generado por el range.
+
+'''
+'''Imprimir la sumatoria desde 1 hasta un valor dado'''
+# num=int(input('Digita un número '))
+# suma=0
+# for i in range(1,num+1): #El ciclo inicia en 1 y termina en el número dado por el usuario + 1, para que se incluya al número que escribió el usuario
+#     suma=suma+i #Este acumulador se encarga de sumar el valor en la variable i, que será cada uno de los números desde el 1 hasta llegar al número escrito por el usuario. Este acumulador debe inicializar en un valor (en este caso 0)
+# print(suma)
+
+'''
+CICLO WHILE
+Es un ciclo que permite repetir la ejecución de un grupo de instrucciones mientras se cumpla una condición
+
+El ciclo while es mayormente usado para ejecutar un bloque de código que debe repetirse, pero no conocemos exactamente en que momento deberá dejar de hacerlo.
+
+La condición que se utilizará para ejecutar el ciclo while debe estar previamente inicializada, esta será evaluada en la escritura del ciclo while y deberá ser actualizada (su valor deberá cambiar) dentro del bloque del ciclo while hasta que la condición no pueda ser cumplida (para evitar que se convierta en un ciclo infinito)
+
+sintaxis del bucle while:
+while condicion:
+    cuerpo del bucle
+'''
+''' Convertir entero a binario '''
+# binario='' #Declaramos la variable binario y le asignamos una cadena vacia
+# residuo=0 #Declaramos la variable residuo y le asignamos el valor 0
+# numero=int(input('Digita el número que deseas convertir a binario ')) #Pedimos la usuario que escriba una número
+# while numero>0: #La variable número contiene el número escrito por el usuario, mientras la variable número sea mayor que 0, se ejecutarán las instrucciones dentro del bloque while
+#   residuo=numero%2 #Se divide el número entre 2 usando el operador de módulo(residuo) y lo almacenamos en la variable residuo
+#   binario=str(residuo)+binario #En la variable binario convertir con str el número dentro de la variable residuo a una cadena, es decir se coloca entre comillas y luego se +(concatena) a la cadena que se encuentre dentro de la variable binario en el ciclo anterior, o vacío para la primera vez
+#   numero=numero//2 #La variable número es divida entre 2 con el operador de división cociente y almacenamos ese número en la misma variable numero (esto reemplaza el valor inicial y/o anterior)
+# print(f'El binario sería {binario}')#Al finalizar el ciclo while, se imprimirá lo que haya almacenado en la variable binario.
+
+
+'''tabla de multiplicar elegida por el usuario'''
+# num=int(input('Digita el número de la tabla que quieres ver: '))
+# for i in range(1,10): #El rango crea una secuencia de 1 hasta 10-1 (9)
+#     print(f'{num}x{i}={num*i}') #Se imprime el número que el usuario escribió, se imprime el valor de la variable i y se imprime la multiplicación de la variable num por la variable i
+
+''' tabla de multiplicar desde la 1 hasta la 9'''
+# for i in range(1,10): #El rango crea una secuencia de 1 hasta 10-1 (9)
+#     for j in range(1,10): #El rango crea una secuencia de 1 hasta 10-1 (9)
+#         print(f'{i}x{j}={i*j}')#Se imprime el valor de la variable i, se imprime el valor de la variable j y se imprime la multiplicación de la variable i por la variable j
+#     print('') #Se imprime un espacio en blanco
+
+
+'''1.	Realizar un programa que imprima 25 términos de la serie 11 - 22 - 33 - 44, etc. (No se ingresan valores por teclado'''
+# num=11 #inicializo la variable num en 11
+# for i in range(25): #creo un ciclo que se ejecute 25 veces
+#     print(num) #imprimo el valor en la variable num
+#     num=num+11 #incremento en 11 el valor de la variable num
+
+# num=11 #inicializo la variable num en 11
+# contador=1 #creo una variable contador para usarla como condición en el ciclo while
+# while contador<=25: #evaluo que el valor de la variable contador para saber si ya se ejecutó el bloque 25 veces
+#     print(num) #imprimo el valor actual en la variable num
+#     num=num+11 #incremento en 11 el valor de la variable num
+#     contador+=1 #Aumento en 1 el valor de la variable contador, contador+=1 es lo mismo que contador=contador+1, pero más corto
+
+'''2.	Mostrar los múltiplos de 8 hasta el valor 500. Debe aparecer en pantalla 8 -16 – 24, etc.'''
+# for i in range(8,500,8): #creo que un ciclo que se ejecute desde el número hasta el 500, con pasos de 8 entre un valor y otro de la secuencia
+#     print(i) #imprimo el valor de la variable i en la secuencia
+
+# num=8 #Inicializo la variable num en 8
+# while num<500: #evaluo que la variable num sea menor que 500 para ejecutar el bloque del ciclo while
+#     print(num) #imprimir el valor en la variable num
+#     num+=8 #incremento en 8, el valor de la variable num, es lo mismo que num=num+8
+
+
+
+'''3.	Realizar un programa que muestre los números del 1 al 10 en orden inverso (descendente).'''
+# for i in range(10,0,-1): #creo un ciclo que recorra la secuencia desde el número 10 hasta el 0-1 (es decir el elemento anterior al 0) y descontando desde el valor inicial
+#     print(i) #imprimo el valor en la variable i
+
+# num=10 #Inicializo la variable num en 10
+# while num>0: #Evaluo que la variable num sea mayor que 0
+#     print(num) #imprimo el valor en la variable num
+#     num-=1 #Decremento en valor de la variable num en 1, es lo mismo que num=num-1
+
+'''4.	Dados 2 números, devolver los números pares que existen entre sí.'''
+# num1=int(input('Digita un número ')) 
+# num2=int(input('Digita otro número '))
+# if num1>num2: #verifico si el primer número es más grande que el segundo
+#     for i in range(num2,num1+1):#Creo que un ciclo que se recorre desde el número en la variable num2 hasta el valor de la variable num1+1, para que se incluya el num1 en la lista
+#         if i%2==0: #evaluo si el número en la variable i es divisible por 2 y el residuo es 0, por lo que sería un número par
+#             print(i) #imprimo el valor de i
+# elif num2>num1: #verifico si el segundo número es más grande que el primero
+#     for i in range(num1,num2+1):#Creo que un ciclo que se recorre desde el número en la variable num1 hasta el valor de la variable num2+1, para que se incluya el num1 en la lista
+#         if i%2==0:#evaluo si el número en la variable i es divisible por 2 y el residuo es 0, por lo que sería un número par
+#             print(i) #imprimo el valor de i
+# else: #si el num1 no es mayor que el num2 y tampoco el num2 es mayor que el num1, entonces significa que son iguales.
+#     print('Los números son iguales')
+
+
+'''6.	Dados 2 números, contar la cantidad de números pares que existen entre sí'''
+#El código es igual al anterior, pero en lugar de imprimir los pares cuenta la cantidad
+# cont=0 #Se inicializa la variable cont en 0 (será mi contador)
+# num1=int(input('Digita un número ')) 
+# num2=int(input('Digita otro número '))
+# if num1>num2:  
+#     for i in range(num2,num1+1):
+#         if i%2==0: 
+#             cont+=1 #Se incrementa mi contador en 1 cada vez que el número es par
+#     print(cont) #Se imprime el valor almacenado en la variable cont al finalizar el ciclo for (tenga en cuenta la indentación)
+# elif num2>num1: 
+#     for i in range(num1,num2+1):
+#         if i%2==0:
+#             cont+=1 #Se incrementa mi contador en 1 cada vez que el número es par
+#     print(cont) #Se imprime el valor almacenado en la variable cont al finalizar el ciclo for (tenga en cuenta la indentación)
+# else:
+#     print('Los números son iguales')
+
+'''4.	Algoritmo que lea números enteros hasta teclear 0, y nos muestre el máximo, el mínimo y la media de todos ellos. Piensa como debemos inicializar las variables'''
+# num=1 #inicializa la variable num en 1 para que se pueda ejecutar el bloque while, si lo coloco en 0, la condición no se cumpliría y no se ejecutaría el bloque de código
+# max=0 #inicializo el valor de la variable max que será el máximo en 0, esta versión tiene dificultados con números negativos
+# min=0 #inicializo el valor de la variable max que será el máximo en 0, esta versión tiene dificultados ya que si el usuario ingresa 0, se detiene el programa por lo que el 0 no debería contemplarse. Si lo cambiamos por 1, y el usuario no uso, sería incorrecto, y así sucesivamente. Una forma de resolverlo sería asignar un número muy grande, esperando que el usuario nunca lo ingrese, ya que "cualquier valor" sería más pequeño
+# media=0 #La variable media servirá para acumular los números ingresados
+# cont=0 #La variable cont servirá para contar cuantos números se ingresaron
+# while num!=0: #Se evalúa que el valor de la variable num no sea 0
+#     num=int(input('Digita un número ')) #Se registra el número ingresado por el usuario en la variable num
+#     if cont==0: #Con este condicional corrijo la inicialización del max y el min. El primer número ingresado será asignado como máximo y mínimo.
+#         min=num 
+#         max=num
+#     if num!=0: #Si el número ingresado es 0, no se toma en cuenta
+#         media+=num #Se acumulan los números que no sean 0
+#         cont+=1 #Se cuentan los números que no sean 0
+#         if num>max: #Se compara el valor de la variable número con el valor en la variable max, si el número en la variable num es más grande, 
+#             max=num #entonces será el nuevo máximo
+#         if num<min: #Se compara el valor de la variable número con el valor en la variable min, si el número en la variable num es más pequeño, 
+#             min=num #entonces será el nuevo min
+# print(f'Máximo: {max}') #Se imprime el valor en la variable max
+# print(f'Mínimo {min}') #Se imprime el valor en la variable min
+# print(f'Media {media/cont}') #Se imprime la división de todos los valores sumados en la cantidad de valores ingresados (conteo)
+        
+
+
+
+
+'''5.	Mostrar los n-úmeros del 1 al 100 (ambos incluidos) divisibles entre 2 y 3. Utiliza el bucle que desees'''
+# for i in range(1,101): #Creamos un ciclo que se ejecuta 100 veces, desde el 1 hasta el 101-1 (es decir 100)
+#     if i%2==0 and i%3==0: #Se evalua si el valor en la variable i es divisible entre 2 y 3,
+#         print(i,end=', ') #Se imprime el valor en la variable i y usamos el argumento end=', ' para que en lugar de pasar a la siguiente línea, se imprima una coma y una espacio después de la coma.
+
+
+'''8.	Realizar un programa que acumule (sume) valores ingresados por teclado hasta ingresar el 9999 (no sumar dicho valor, solamente indica que ha finalizado la carga). Imprimir el valor acumulado e informar si dicho valor es cero, mayor a cero o menor a cero.'''
+# num=0 #Se inicializa la variable número en 0 para asegurar que se ejecutará el while
+# suma=0 #Se inicializa la variable sumatoria en 0
+# while num!=9999: #Se evalua que el valor en la variable número sea diferente de 9999 para ejecutar el ciclo
+#     num=int(input('Digita un número ')) #Se almacena el número digitado por el usuario
+#     if num!=9999: #Se compara el número digitado para ver si es 9999, si no lo es, este se suma
+#         suma+=num #Se usa la variable suma para acumular los números ingresados que no sean 9999
+# print(f'El acumulado es: {suma}') #Se imprime el valor almacenado en la variable suma
+# if suma>0: #Se verifica si el valor de suma es mayor a 0
+#     print('Mayor a 0')
+# elif suma<0: #Se verifica si el valor de suma es menor a 0
+#     print('Menor a 0')
+# else: #Si no es mayor o menor, entonces debe ser 0
+#     print('Igual a 0')
+
+'''7.	Se desea validar una clave que sea 123456 hasta en tres oportunidades, debe indicar cuantos intentos lleva y cuantos le restan.'''
+# clave='123456' #Creamos una variable que contiene la clave
+# intentos=3 #Creamos una variable intentos y la inicializamos con la cantidad de intentos máximos
+# oportunidades=0 #Creamos una variable oportunidades para registar cuantas oportunidades he utilizado
+# while intentos>0: #Evaluamos que la variable intentos sea mayor a cero para ejecutar el bloque del ciclo while
+#     contrasena=input('Digita la contraseña ') #Solicitamos al usuario que escriba la contraseña
+#     if contrasena==clave: #Verificamos si la contraseña escrita es igual a la clave almacenada
+#         print('Bienvenido ') 
+#         intentos=0 #colocamos la variable intentos en 0 para que no se ejecute otra vez el ciclo while
+#     else: #En caso de que no sean iguales
+#         oportunidades+=1 #Incrementamos en 1 las oportunidades utilizadas
+#         intentos-=1 #Decrementamos en 1 los intentos utilizados
+#         print(f'Llevas {oportunidades} oportunidades, te quedan {intentos} intentos' ) #imprimimos cuantas oportunidades hemos gastado y cuantos intentos nos quedan
+# if intentos==0: #Evaluamos si ya no tenemos más intentos para mostrar el mensaje de error al iniciar.
+#     print('Error en la contraseña, superaste los intentos máximos')
+
+'''Podemos también aplicar el uso de una bandera (flag o testigo), las banderas o testigos pueden tener cualquier nombre, por lo general se asigna un valor True o False para la validación'''
+# bandera=False #Inicilizmoas la bandera con valor False
+# clave='123456'
+# intentos=3 
+# oportunidades=0 
+# while bandera==False: #Evaluamos si la bandera sigue teniendo valor False para ejecutar el ciclo
+#     contrasena=input('Digita la contraseña ') 
+#     if contrasena==clave: 
+#         print('Bienvenido ') 
+#         bandera=True #Cuando se escribe correcta la contraseña, cambiamos el valor False por True para que no se ejecute más el ciclo while
+#     else: 
+#         oportunidades+=1 
+#         intentos-=1 
+#         print(f'Llevas {oportunidades} oportunidades, te quedan {intentos} intentos' ) 
+#         if intentos==0: #Debemos evaluar cuando ya no se tienen más intentos para cambiar el valor de la bandera y evitar que se siga ejecutando el ciclo while.
+#             bandera=True 
+# if intentos==0: 
+#     print('Error en la contraseña, superaste los intentos máximos')
+
+'''
+8.	Escribir un algoritmo que encuentre y despliegue los números primos entre uno y cien. Un número primo es divisible entre el mismo y la unidad por lo tanto un numero primo no puede ser par excepto el dos (2)'''
+
+# for dividendo in range(2,101): #Este rango crea una secuencia entre 2 y 100 que será recorrida por el ciclo for
+#   cont=0 #Este contador se coloca en 0 cada vez que se ejecuta el ciclo
+#   for divisor in range (1,dividendo+1): #Este rango crea una secuencia entre 1 y el valor actual del dividendo
+#     if dividendo%divisor==0: #Se evalúa si al dividir el dividendo entre el divisor con el operador de módulo (% =>Residuo de la división entera), el resultado es 0
+#       cont+=1 #El contador se incrementa en 1
+#   if cont==2: #Si el contador tiene un valor de 2, significa que el número no tiene más de 2 divisores, por lo que es un número primo
+#     print(f'{dividendo} Es primo')
+
+# '''Solución aportada por SAMUEL'''
+# for i in range (2,101): #Ciclo que recorre un rango desde el 2 hasta el 100
+#   primos=True #Bandera inicializada en True que solo cambiará si el número tiene otros divisores
+#   for j in range (2,i+1):#Ciclo que recorre un rango desde 2 hasta el valor de la variable i
+#     if i==j: #Se evalúa si el valor de la variable i es igual al valor de la variable j
+#       break #se finaliza el ciclo for
+#     elif i%j==0: #Se evalúa que el valor en la variable i al dividirla con el operador módulo(% =>Residuo de la división entera) sea 0
+#       primos=False #Modifica el valor de la bandera primos, ya que todo número es divisible por 1 y por si mismo, si se encuentra otro divisor entonces ya no es primo
+#     # # else: 
+#     # #continue #continue, permite indicarle al ciclo que pase a la siguiente iteración (actualice). Para este plantemiento, no es necesario así que podemos obviarlo
+#   if primos==True: #Si el valor de la bandera primos está en True, ese número no tiene ningún otro divisor.
+#     print (' ',i,end='') #Imprime el valor actual de la variable i que no tiene más divisores.
+
+'''
+Diseñar un programa que nos permita realizar las siguientes tareas:
+1. Ingresar el nombre de un estudiante
+2. Ingresar las notas de un estudiante (5 notas)
+3. Mostrar la nota definitiva de un estudiante
+4. Mostrar si el estudiante aprueba o no la materia
+5. Mostrar el nombre del estudiante, la nota definitiva y si aprobó o no la materia
+6. Salir
+
+
+'''
+# paso1,paso2,paso4=False,False,False
+# acumulador=0
+# opcion=0
+# while opcion!=6:
+#     opcion=int(input('''
+# 1. Ingresar el nombre de un estudiante
+# 2. Ingresar las notas de un estudiante 
+# 3. Mostrar la nota definitiva de un estudiante
+# 4. Mostrar si el estudiante aprueba o no la materia
+# 5. Mostrar el nombre del estudiante, la nota definitiva y si aprobó o no la materia
+# 6. Salir
+# Digita una opción: '''))
+#     match opcion:
+#         case 1:
+#             # if paso1==True: #Para la pregunta, como evitar que se realice un paso que ya se hizo, esta sería un posible respuesta.
+#             #     print('Ya se registró el nombre')
+#             # else:
+#                 nombre=input('Digita el nombre del estudiante: ')
+#                 paso1=True
+#         case 2:
+#             if paso1==True:
+#                 for i in range(5):
+#                     nota=-1
+#                     while nota<0 or nota>5:
+#                         nota=float(input(f'Digita la nota {i+1}'))
+#                     acumulador+=nota
+#                 definitiva=acumulador/5
+#                 paso2=True
+#             else:
+#                 print('Primero debes el paso 1')
+#         case 3:
+#             if paso1==True and paso2==True:
+#                 print(definitiva)
+#             else:
+#                 print('Primero debes el paso 1 y el 2')
+#         case 4:
+#             if paso1==True and paso2==True:
+#                 if definitiva>=3.5:
+#                     print('aprobó')
+#                     estado='aprobó'
+#                 else:
+#                     print('reprobó')
+#                     estado='reprobó'
+#                 paso4=True
+#             else:
+#                 print('Primero debes el paso 1 y el 2')
+#         case 5:
+#             if paso1==True and paso2==True and paso4==True:
+#                 print(f'Nombre {nombre} Definitiva: {definitiva} y {estado}') 
+#             else:
+#                 print('Primero debes el paso 1, 2 y 4')
+
+#         case 6:
+#             break       
+#         case otro:
+#             print('Esa opción no está disponible ')
+
+
+'''
+21.	Realizar un programa que lea los lados de 4 triángulos, e informar:
+a) De cada uno de ellos, qué tipo de triángulo es: equilátero (tres lados iguales), isósceles (dos lados iguales), o escaleno (ningún lado igual)
+b) Cantidad de triángulos de cada tipo.
+c) Tipo de triángulo del que hay menor cantidad.
+
+'''
+
+# equi,isoc,esca=0,0,0 #Inicializamos los contadores en 0
+# for i in range(4): #ciclo de 4 elementos (1 por cada triángulo)
+#     lado1,lado2,lado3='','','' #Inicializamos las variables para guardar los lados de cada triángulo. Estan al inicio del for para reiniciarlos en cada iteración del ciclo. Además se establecieron como '' (cadenas vacias) para que se ejecute el while, que evita que se deje vacío o se escriba 0
+#     while lado1=='0' or lado1=='': #Al inicializar la variable en '', se obliga a ingresar al while y hacer que el usuario escriba un valor y no se sale del ciclo hasta que el valor sea diferente de '' o de '0'
+#         lado1=input('Digita el lado 1 del triángulo') #Se almacena el dato escrito por el usuario en la variable lado1
+#     while lado2=='0' or lado2=='':
+#         lado2=input('Digita el lado 2 del triángulo')
+#     while lado3=='0' or lado3=='':
+#         lado3=input('Digita el lado 3 del triángulo')
+
+#     if lado1==lado2 and lado2==lado3: #Se evalua si los lados son iguales
+#         print('Equilatero')
+#         equi+=1 #Se usa este contador para incrementar y almacenar las veces que se cumplió la condición
+#     elif (lado1==lado2 and lado1!=lado3) or (lado1==lado3 and lado2!=lado3) or (lado2==lado3 and lado1!=lado2) : #Se evalua si alguno de los lados es igual a otro
+#          print('Isósceles')
+#          isoc+=1
+#     else:
+#         print('Escaleno')
+#         esca+=1
+
+# print(f'Hay {equi} triángulos equilateros') #Se imprime
+# print(f'Hay {isoc} triángulos isósceles')
+# print(f'Hay {esca} triángulos escaleno')
+
+# if esca<isoc and esca<equi: #Se evalúa cual es el menor
+#     print('Hay menos escalenos')
+# elif isoc<esca and isoc<equi:
+#     print('Hay menos isósceles')
+# elif equi<isoc and equi<esca:
+#     print('Hay menos equilateros')
+# elif esca==isoc and equi>esca: #Se evalua si hay 2 iguales y si son menor que el otro
+#     print('Hay menos escalenos e isósceles')
+# elif equi==isoc and esca>equi:
+#     print('Hay menos equilateros e isósceles')
+# elif equi==esca and isoc>equi:
+#     print('Hay menos equilateros y escalenos')
+
+'''
+11.	Imprimir un triángulo de números.
+1
+12
+123
+1234
+12345
+'''
+# for i in range (1,6): #El ciclo se repetirá 5 veces
+#     for j in range(1,i+1): #El ciclo se ejecutará desde 1 hasta el valor actual de la variable i + 1
+#         print(j,end='') #Se imprime el valor de j sin saltar de línea
+#     print('') #Se imprime un espacio en blanco al finalizar cada iteración de i
+
+# x='' #Se inicializa una cadena vacía
+# for i in range(1,6): #Se recorre un ciclo de 5 elementos
+#     x+=str(i) #A la cadena vacía le sumamos (concatenamos) el valor de i convertir en cadena con str
+#     print(x) #Imprimos el valor de la cadena almacenada en la variable x
+
+'''
+54321
+4321
+321
+21
+1
+'''
+# for i in range(5,0,-1): #Se inicia el ciclo en 5, y se decrementará hasta llegar al elemento antes del 0.
+#     for j in range(i,0,-1): #Se inicia el ciclo en el valor actual de la iteración de i, y se decrementará hasta llegar al elemento antes del 0.
+#         print(j,end='') #Se imprime el valor de j sin saltar de línea por lo que en ciclo se imprime los números correspondiente del ciclo
+#     print('') #Se imprime un salto de línea para separar del conjunto de números anterior
+
+
+'''
+54321
+5432
+543
+54
+5
+'''
+    
+#SOLUCIÓN DE RAMON
+for i in range(0,6):#Ciclo que tendrá 5 elementos
+  for j in range (5,i,-1): #Ciclo que se inicia en 5 y va hasta el valor actual de i, y se descuenta 1 en cada decremento
+    print(j, end='') #Se imprime el valor de j sin saltar de línea
+  print('') #imprime un espacio en blanco
+
+'''SOLUCIÓN APLICANDO INDICES
+Esta es una solución que se aplica haciendo uso de las cadenas y los indices'''
+# x='54321' #Cadena que contiene el valor
+# for i in range(len(x),0,-1): #siclo que se recorrerá desde el tamaño que tenga la cadena hasta 0 disminuyendo de 1 en 1
+#     print(x[0:i]) #Se imprimirá la cadena desde el elemento 0 de la cadena (1 elemento) hasta la posición del elemento i de la iteración
+
+
+'''
+10.	Hacer un algoritmo para calcular el residuo (módulo) y cociente (trunc o div o //) solo por medio de restas sucesivas.
+'''
+# dividendo=int(input('Digita el valor del dividendo '))
+# divisor=int(input('Digita el valor del divisor '))
+# cociente=0 #Inicialización del contador para cociente
+# residuo=dividendo #inicialización del residuo. Se establece en el valor del residuo en el dividendo, pues teniendo en cuenta el enunciado hay que restar sucesivamente. Ejemplo 20/2, sería 20-2=18 y luego 18-2=16 y luego, 16-2=14 y así sucesivamente.
+# if dividendo>divisor: #Se evalúa que el dividendo sea mayor que el divisor para poder aplicar la resta sucesiva, correctamente
+#     while residuo>=divisor: #Se evalua que mientras que el valor del residuo sea mayor o incluso igual al divisor, debe ejecutarse el bloque de instrucciones
+#         cociente+=1 #Se suma 1 por cada vez que se ejecute el ciclo
+#         residuo-=divisor #Se resta el valor del residuo actual, menos el valor del divisor. RECORDEMOS que se inicializó el residuo en el valor del dividendo y a este se le va restando el respectivo divisor.
+# else: #En caso de que el divisor sea mayor
+#     cociente=0 #El cociente entero será el 0
+#     residuo=dividendo #El residuo entero será el mismo dividendo
+
+# print(f'Residuo {residuo}')
+# print(f'Cociente {cociente}')

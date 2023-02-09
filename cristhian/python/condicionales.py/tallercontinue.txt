@@ -1,0 +1,41 @@
+'''cninos,cjovenes,cadultos,cmayores=0,0,0,0
+pninos,pjovenes,padultos,pmayores=0,0,0,
+for i in range(20):
+    edad=int(input('Digita la edad: '))
+    peso=float(input('Digite el peso: '))
+    if edad>=60:
+        cmayores+=1
+        pmayores+=peso
+    elif edad>=30:
+        cadultos+=1
+        padultos+=peso
+    elif edad>=13:
+        cjovenes+=1
+        pjovenes+=peso
+    elif edad>=0:
+        cninos+=1
+        pninos+=peso
+
+
+if cninos>0:
+    print(f'El promedio de peso en niños es {pninos/cninos} ')
+if cjovenes>0:
+    print(f'El promedio de peso en jovenes es {pjovenes/cjovenes} ')
+if cadultos>0:
+    print(f'El promedio de peso en adultos es {padultos/cadultos} ')
+if cmayores>0:
+    print(f'El promedio de peso en mayores es {padultos/cadultos} ')'''
+
+
+'''tventas=0
+salida=''
+cantidadvendedores=int(input('digite cantidad de vendedores '))
+for i in range(cantidadvendedores):
+    sueldo=float(input('digita el sueldo base '))
+    for j in range(3):
+        venta=float(input(f'digita el valor de la venta nro {j+1} '))
+        tventas+=venta
+    comisiones=tventas*0.1
+    salida+="el valorde", + str(comisiones) +"a pagar sera" + str(sueldo+comisiones)
+    print(salida)'''
+

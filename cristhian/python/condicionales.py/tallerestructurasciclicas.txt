@@ -1,0 +1,96 @@
+#punto 1
+'''num1=1
+suma=0
+while num1!=0:
+    num1=int(input('digita numero '))
+    suma=num1+suma
+    print({suma})'''
+        
+#punto 2
+'''import random
+for i in range(0,10):
+    print(random.randint(1,10))'''
+
+#punto 3
+'''import random
+for i in range(20):
+    
+    print(random.randint(0,1000))'''
+    
+#punto 4
+'''numero=0
+while numero<100:
+    numero+=1
+    if numero%2 != 0:
+        print(numero)'''
+
+#punto 5
+#bandera=0
+#for i in range(1,21):
+#    while bandera<=i:
+
+    
+
+
+#punto 6
+#for i in range(1,5):
+#    for j in range(1,i+1):
+#        for k in range(1,j+1):
+#            print(k,end='')
+#    print('')#falta imprimir secuencia 1.1.1
+
+
+#punto 7
+
+contador1,contador2,contador3=0,0,0
+cat=input(f'indique tipo de animal \n.1 Elefante \n.2 Jirafas \n.3 Chimpances \n. ')
+match cat:
+    case 1:
+        for i in range(20):
+            edad=int('indique edad ')
+            if edad>=0 and edad<=1:
+                contador1=+1
+            elif edad>1 and edad<3:
+                contador2=+1
+            elif edad>=3:
+                contador3=+1
+        prom1=(contador1*100)/20
+        prom2=(contador2*100)/20
+        prom3=(contador3*100)/20
+    case 2:
+        for i in range(15):
+            edad=int(input('indique edad '))
+            if edad>=0 and edad<=1:
+                contador1=+1
+            elif edad>1 and edad<3:
+                contador2=+1
+            elif edad>=3:
+                contador3=+1
+        prom1=(contador1*100)/15
+        prom2=(contador2*100)/15
+        prom3=(contador3*100)/15
+    case 3:
+        for i in range(40):
+            edad=int(input('indique edad '))
+            if edad>=0 and edad<=1:
+                contador1=+1
+            elif edad>1 and edad<3:
+                contador2=+1
+            elif edad>=3:
+                contador3=+1
+        prom1=(contador1*100)/40
+        prom2=(contador2*100)/40
+        prom3=(contador3*100)/40
+print(f'tenemos {prom1}, {prom2}, {prom3} ')
+
+
+
+            
+        
+#punto 8
+       
+vendedores=0
+sueldo=int(input('digite el valor del sueldo '))
+
+
+

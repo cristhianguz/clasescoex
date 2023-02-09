@@ -1,0 +1,133 @@
+#Punto 1
+
+'''num1=int(input('digite un numero '))
+num2=int(input('digite un numero '))
+if num1>num2:
+    print(f'{num1}\n{num2} ')
+else:
+    print(f'{num2}\n{num1} ')'''
+
+#Punto 2
+
+'''numero=int(input('ingresa un numero \n.1 \n.2 \n.3 \n.4 \n.5 \n.6 \n.7 \n.8 \n.9 \n.10 \n '))
+match numero:
+    case 1:
+        print('impar')
+    case 2:
+        print('par')
+    case 3:
+        print('impar')
+    case 4:
+        print('par')
+    case 5:
+        print('impar')
+    case 6:
+        print('par')
+    case 7:
+        print('impar')
+    case 8:
+        print('par')
+    case 9:
+        print('impar')
+    case 10:
+        print('par')'''
+
+#punto 3
+
+'''numero=int(input('ingresa un numero \n.1 \n.2 \n.3 \n.4 \n.5 \n.6 \n.7 \n.8 \n.9 \n.10 \n '))
+match numero:
+    case 1:
+        print('UNO')
+    case 2:
+        print('DOS')
+    case 3:
+        print('TRES')
+    case 4:
+        print('CUATRO')
+    case 5:
+        print('CINCO')
+    case 6:
+        print('SEIS')
+    case 7:
+        print('SIETE')
+    case 8:
+        print('OCHO')
+    case 9:
+        print('NUEVE')
+    case 10:
+        print('DIES')
+    case _:
+        print('Error')'''
+
+#punto 4
+
+'''minutos=int(input('Digite la cantidad de minutos utilizados '))
+vm=0
+if minutos>=1 and minutos<=3:
+    print(f'tu llamada tiene un costo de 200 pesos')
+elif minutos>3:
+    vm=minutos*100
+    print(f'tu llamada tiene un costo de {vm} ')'''
+
+#punto 5
+
+'''c1=int(input('conejos blancos '))
+c2=int(input('conejos negros '))
+p1=int(input('digite valor de conejos blancos '))
+p2=int(input('digite valor conejos negros '))
+vx=int(input('cantidad de conejos negros vendidos '))
+vy=int(input('cantidad de conejos blancos vendidos'))
+ccv=0
+ptc=0'''
+
+
+
+
+
+
+#punto6
+
+
+'''notaprevio1=float(input('digite nota de previos 1 '))
+notaprevio2=float(input('digite nota de previo 2 '))
+notaprevio3=float(input('digite nota previo 3 '))
+notatrabajo1=float(input('digite nota trabajo 1 '))
+notatrabajo2=float(input('digite notatrabajo 2 '))
+notafinal=0
+if notaprevio1>=1 and notaprevio1<=5 and notaprevio2>=1 and notaprevio2<=5 and notaprevio3>=1 and notaprevio3<=5:
+    notapreviof=(notaprevio1+notaprevio2+notaprevio3)/3*0.60
+if notatrabajo1>=1 and notatrabajo1<=5 and notatrabajo2>=1 and notatrabajo2<=5:
+    notatrabajof=(notatrabajo1+notatrabajo2)/2*0.40
+notafinal=(notapreviof+notatrabajof)
+print(f'su promedio final de previos fue de {notapreviof}, la de trabajos fue de {notatrabajof}, por lo tanto su nota final fue de {notafinal} ')'''
+    
+
+
+#punto 7
+
+'''nombrea=int(input('digite el nombre del articulo '))
+clave=int(input('ingresa la clave del producto '))
+precioo=int(input('ingresa el presio original '))
+cantidad=int(input('ingresa la cantidad '))
+pd=0
+descuento=0
+if clave==1:
+    pd=precioo*0.10
+    print(f'para tu producto {nombrea},tienes un descuento del 10%{descuento}, el precio original es de {precioo}, y cuentas con una cantidad de{cantidad},por lo tanto el precio final con deacuento es de{pd} ')
+elif clave==2:
+    pd=precioo*0.20
+    print(f'para tu producto {nombrea},tienes un descuento del 20%{descuento}, el precio original es de {precioo}, y cuentas con una cantidad de{cantidad},por lo tanto el precio final con deacuento es de{pd} ')
+'''
+
+# punto 8
+       
+areashospital=int(input('digite el area de hospital \n.1 psquiatria \n.2 pediatria \n.3 traumatologia \n '))
+presupuestopsquiatria=0
+presupuestopediatria=0
+presupuestotraumatologia=0
+presupuestoanual=int(input('ingrese el presupuesto anual '))
+match areashospital:
+    case 1:
+        ptp=(presupuestoanual*presupuestopsquiatria)*1.99
+    
+

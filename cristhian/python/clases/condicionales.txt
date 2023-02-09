@@ -1,0 +1,203 @@
+# """ Imprimir un mensaje que indique si una persona es mayor o menor de edad """
+# # edad=17
+# # if edad>18:  #El if representa la pregunta SI y junto a ella se muestra al condición, luego se coloca signo :
+# #     print('eres mayor') #las tareas que pertenece al contexto (bloque, scope, ámbito) del if, se colocan a 4 espacios (tabulación)
+# # else: #El else representa todos aquellos valores que no son verdaderos en la condición.
+# #     print('eres menor')
+# # print('Se definió tu suerte') #Este texto se imprime para cualquiera de las 2 opciones, pues forma parte del ambito global del programa
+
+# """ Escribir un programa que evalua si una nota se encuentra dentro de un rango valido de 0 a 5 y que luego muestre si el estudiante aprueba si su nota es mayor o igual a 3.0 o no aprueba si es menor que 3.0 """
+# # nota=3.5
+# # if nota>=0 and nota<=5.0:
+# #     if nota>=3.0:
+# #         print('aprobó')
+# #     else:
+# #         print('no aprobó')
+# # else:
+# #     print('nota no es valida')
+
+
+# """ Para ingresar a un parque, se determina el valor de la entrada según la categoría de la persona. Si es categoria A, el valor de la entrada será de 3000, si es categoría B, el valor de la entrada será de 7000, si es de categoría C, el valor de la entrada será de 12000 y finalmente para los demás será de 21000. """
+
+# cat=input('Digita tu categoria')
+# if cat.lower()=='a' :  #función lower() para convertir a minúscula
+#     pago=3000
+# elif cat.lower()=='b': #if y elif requieren de una condición a evaluar
+#     pago=7000
+# elif cat.lower()=='c':
+#     pago=12000
+# else:
+#     pago=21000
+# print(pago) #este mensaje pago, se imprimirá sin importar cual de las condiciones se haya cumplido, pero imprimirá el valor del pago según la condición que si se cumplió.
+
+# print(type(pago)) #función type, para evaluar el tipo de dato de una variable o valor
+
+
+# '''
+# 1.	La empresa La Generosa S.A desea aumentar el sueldo a sus empleados, para ello ha establecido las siguientes condiciones: quienes ganan hasta $ 800.000 tendrán un incremento del 10%, quienes devengan más de $800.000 y hasta $1200.000 recibirán un aumento del 8% y los demás del 5%. Se requiere un algoritmo que calcule el valor del aumento y el nuevo salario para cada empleado.
+# '''
+
+# salario=int(input('Digita salario empleado '))
+# if salario<=800000:
+#   print(f'su aumento sera del 10%, el valor del incremento será de  {salario*0.1} y su nuevo salario será {salario*1.1}')
+# elif salario>800000 and salario<=1200000:
+#   print(f'su aumento sera del 8%, el valor del incremento será de  {salario*0.08} y su nuevo salario será {salario*1.08}')
+# else:  #podría ser más adecuado elif(salario>1200000)
+#   print(f'su aumento sera del 5%, el valor del incremento será de  {salario*0.05} y su nuevo salario será {salario*1.05}')
+
+# '''
+# Para trabajar con una sola impresión o salida por pantalla, podemos trabajar con una variable que almacene el valor del aumento. En este caso se evaluó que el valor del salario fuera positivo y mayor que 0
+# '''
+# #aumento=0
+# # elif salario>800000 and salario <=1200000:
+# #   aumento=8
+# # elif salario>0 and salario <=800000:
+# #   aumento=10
+# # else:
+# #   aumento=0
+  
+# # if aumento == 0:
+# #   print('tu estás loco si no te pagan')
+# # else:
+# #   valor=salario*aumento/100
+# #   print(f'El salario se incrementará el {aumento}%, el valor a incrementar será de {valor} y el nuevo salario será {salario+valor}' )
+
+# '''
+# otra opción es hacer uso de los rangos de la siguiente manera
+# '''
+# salario=int(input('Digita el valor del salario '))
+# if salario>1200000:
+#     print(f'5% Valor aumento {salario*0.05} Nuevo salario {salario*1.05}')
+# elif salario>=800000:
+#     print(f'8% Valor aumento {salario*0.08} Nuevo salario {salario*1.08}')
+# elif salario>0:
+#     print(f'10% Valor aumento {salario*0.1} Nuevo salario {salario*1.1}')
+# else:
+#     print('Error en el valor digitado')
+
+
+'''
+3.	Se requiere un algoritmo que decida si un empleado tiene derecho al auxilio de transporte. Se conoce que todos los empleados que devengan un salario menor o igual a 2 salarios mínimos legales tienen derecho a este rubro. 
+'''
+# salario=int(input('Digite el salario '))
+# smlv=1160000
+# if salario<=smlv*2:
+#   print('Tiene derecho')
+# else:
+#   print('No tiene derecho')
+
+'''
+Realizar un algoritmo que nos permite realizar operaciones aritméticas básicas (+,-,*,/) entre 2 valores. Haciendo uso del match
+'''
+# val1=int(input('Digita el primer valor '))
+# val2=int(input('Digita el segundo valor '))
+# operacion=input('''1. Suma
+# 2. Resta
+# 3. Multiplicación
+# 4. División
+# escoge opcion: ''') #usar las ''' en un input nos permite hacer que un texto se muestre de la misma forma en que fue escrito. Podemos hacer uso de la coercion para convertir el valor recibido por teclado y comparar contra 1 o 2 o 3 o 4, pero también podemos hacerlo con el valor recibido comparando contra '1' o '2' o '3' o '4' u otros valores.
+# match operacion: #Recuerde que match está disponible en python 3.10 en adelante
+#     case '1': #cada case hace las veces de un if 
+#         print(val1+val2) #aquí también se toma en cuenta la indentación
+#     case '2':
+#         print(val1-val2)
+#     case '3':
+#         print(val1*val2)
+#     case '4':
+#         if val2==0:
+#             print('No es posible dividir por cero')
+#         else:
+#             print(val1/val2)
+#     case otro: #No es necesario llamarlo otro, puede recibir otros nombres, por lo general se ve como _ o default. Hace las veces de un else
+#         print('Error')
+
+'''
+Se requiere aplicar un subsidio para el cobro del alumbrado publico en la factura de los clientes. El subisidio se aplicará según el estrato. Para estrato 1, será el 10%, para estrato 2 el 8%, para estrato 3 el 6% , para estrato 4 el 4%.
+Realice un algoritmo que según el estrato determine el subsidio a aplicar y muestre el valor final a pagar para el cliente.
+'''
+# precioRecibo=float(input('Indique el precio del recibo '))
+# estrato=int(input('Indique el estrato '))
+# match estrato:
+#     case 1:
+#         subsidio=10
+#     case 2:
+#         subsidio=8
+#     case 3:
+#         subsidio=6
+#     case 4:
+#         subsidio=4
+#     case _:
+#         subsidio=0
+# print(f'El valor a pagar de {precioRecibo} tuvo un descuento de {subsidio}% y el valor final a pagar será {precioRecibo-(precioRecibo*subsidio/100)}')
+
+''''
+5.	El almacén Gran Distribuidor vende camisas al por mayor y hace descuentos según la cantidad facturada: en cantidades superiores o iguales a 1000 unidades hace el 10% de descuento; entre 500 y 999, el 8%; entre 200 y 499, el 5%; y en menos de 200 no hay descuento. Dada la cantidad facturada y el precio unitario, se requiere calcular el descuento que se le hace a un cliente y el valor a pagar.
+'''
+# cantCamisas=int(input('Digite la cantidad de camisas '))
+# precioUnit=float(input('Digite el precio por unidad '))
+# if cantCamisas>=1000:
+#     descuento=10
+# elif cantCamisas>=500: #Aquí utilizo elif en lugar de otro if para que si no se aplicó el primero, entonces se aplique el segundo pero no los demás
+#     descuento=8
+# elif cantCamisas>=200: #Aquí utilizo elif en lugar de otro if para que si no se aplicó el primero y el segundo, entonces se aplique el tercero pero no los demás
+#     descuento=5
+# elif cantCamisas>0: #Aquí utilizo elif en lugar de otro if para que si no se aplicó el primero y el segundo, entonces se aplique el tercero pero no los demás
+#     descuento=0
+# pagoInicial=cantCamisas*precioUnit #Aquí se calcula el valor a pagar
+# pagoFinal=pagoInicial-(pagoInicial*descuento/100) #Aquí se calcula el descuento
+# print(f'CantCamisas\t\tPrecioUnit\t\tSubtotal\t\tDescuento\t\tTotal\n{cantCamisas}\t\t\t{precioUnit}\t\t\t{pagoInicial}\t\t\t{descuento}%\t\t{pagoFinal}') #Aquí se usó una cadena f para poder agregar las variables sin necesidad de concatenar. Recuerde que \t corresponde a tabulación y \n corresponde a salto de línea. La idea es que la impresión sea más organizada.  
+
+'''
+6.	El banco Buena Paga ofrece diferentes tasas de interés anual para depósitos a término dependiendo del tiempo por el que se hagan. Si el depósito es por un periodo menor o igual a seis meses la tasa es del 8% anual; entre siete y 12 meses, 10%; entre 13 y 18, 12%; entre 19 y 24, 15%; y para periodos superiores a 24 meses el 18%. Se requiere un algoritmo para determinar cuánto recibirá un cliente por un depósito, tanto por concepto de interés como en total.
+'''
+# deposito=float(input('Indique el valor a depositar'))
+# tiempo=int(input('Indique el plazo del depósito'))
+# if tiempo>24:
+#     interes=18/12
+# elif tiempo>=19:
+#     interes=15/12
+# elif tiempo>=13:
+#     interes=12/12
+# elif tiempo>=7:
+#     interes=10/12
+# elif tiempo>0:
+#     interes=8/12
+# ganancia=deposito*interes/100*tiempo
+# total=deposito+ganancia
+# print(f'Deposito: {deposito}\nTiempo: {tiempo}\nGanancia: {ganancia}\nTotal: {total}')
+
+'''
+7.	Una empresa editorial tiene tres grupos de empleados: vendedores, diseñadores y administrativos. Se requiere calcular el nuevo sueldo para los empleados teniendo en cuenta que se incrementarán sus salarios así: administrativos 5%, diagramadores 10% y vendedores 12%. Mostrar el nuevo sueldo y cual fue el incremento.
+'''
+
+# sueldoActual=float(input('Digite el sueldo actual'))
+# cargo=int(input('1. Administrativo, 2. Vendendor, 3. Diseñador'))
+# match cargo:
+#     case 1:
+#         aumento=5
+#     case 2: 
+#         aumento=10
+#     case 3:
+#         aumento=12
+#     case error:
+#         aumento=0
+# print(f'El nuevo sueldo es {sueldoActual*aumento/100+sueldoActual} y tuvo un aumento del {aumento}% por un valor de {sueldoActual*aumento/100}')
+
+
+'''
+8.	Un vendedor recibe una comisión sobre las ventas efectuadas en el mes, siempre que éstas sean mayores a $ 1.000.000. Los porcentajes de bonificación son:
+Ventas mayores o igual a $ 1.000.000 y hasta $ 2.000.000 = 3%
+Ventas mayores a $ 2.000.000 y hasta $ 5.000.000 = 5%
+Ventas mayores a $ 5.000.000 = 8%
+Se desea saber cuánto corresponde al vendedor por comisión y cuanto recibirá en total en el mes.
+'''
+basico=float(input('Digite el salario basico del empleado '))
+ventas=float(input('Digite el valor de ventas del empleado '))
+if ventas>=1000000 and ventas <=2000000:
+    comision=3/100 #Lo mismo que 0.03
+elif ventas>2000000 and ventas <=5000000:
+    comision=5/100 #Lo mismo que 0.05
+elif ventas>5000000:
+    comision=8/100 #Lo mismo que 0.08
+gananciaComision=ventas*comision
+print(f'El empleado recibirá una comisión de {gananciaComision} más su salario base sería un total de {basico+gananciaComision}')

@@ -1,0 +1,618 @@
+'''
+LISTAS EN PYTHON (ARREGLOS, DIMENSIONES, VECTORES, MATRICES)
+
+Las listas (arreglos) son estructuras que permiten agrupar datos para facilitar su manejo en la memoria del computador y realizar operaciones que requieren tener acceso a conjuntos de datos al tiempo, como: buscar y ordenar. 
+
+Se entiende como lista (arreglo) una colección de elementos, almacenados en direcciones seguidas de memoria a los cuales se hace referencia con un mismo identificador o nombre, pero se distinguen entre sí mediante un índice que representa la posición de cada elemento dentro de la estructura.
+
+Ejemplo
+Estudiantes=['Pepito','Pablito','Pedrito]
+Notas=[4.5,4.7,4.6]
+
+El uso de arreglos es fundamental cuando se requiere mantener en memoria y operar muchos datos.
+
+REPRESENTACIÓN GRÁFICA DE UN VECTOR
+URL: https://javiergarciaescobedo.es/images/stories/apuntes/arrays01.jpg
+
+Lista  = ['a','b','c','d'] =>cada una de las letras es un Elemento
+           0   1   2   3   Posición (Índice)
+
+En programación, los índices de una lista inician en 0
+
+Una matriz es un conjunto de vectores
+URL: https://javiergarciaescobedo.es/images/stories/apuntes/arrays02.jpg
+
+matriz = ['a','b','c','d']
+         ['1','2','3','4']
+
+
+Para declarar una lista (vector o matriz) en python, escribimos, el nombre de la variable y colocamos el conjunto de datos dentro de corchetes ([]) y separados por comas (,)
+
+vector=[1,2,3]
+matriz=[['a','b','c'],[1,2,3]]
+
+Podemos mostrar lo que hay en una posición específica de un vector o matriz, usando su indice.
+Ejemplo
+si tengo la lista vector=[1,2,3] y quiero acceder al elemento que tiene valor 3, escribimos vector[2], ya que teniendo en cuenta los indices, el índice cero le corresponde al valor (elemento) 1, el índice 1, le corresponde al valor (elemento) 2 y el índice 2, le corresponde al valor (elemento) 3.
+
+Si tengoa la lista matriz=[['a','b','c'],[1,2,3]] y quiero acceder al elemento b, entonces escribimos matriz[0][1], ya que entre los elementos de la lista matriz, en el primer elemento que está en el índice cero, dentro de este hay una lista que el índice 1 contiene la letra b.
+'''
+# #Podemos imprimir el contenido de un lista
+# lista=[1,2]
+# print(lista)
+
+# #Podemos imprimir un elemento de una lista
+# lista=[1,2]
+# print(lista[0])
+
+# #No podemos acceder a una posición que no existe en una lista
+# lista=['a','b']
+# print(lista[2]) #arrojará un error indicando que el indice en la lista está fuera del rango
+
+# #Podemos modificar el valor de un elemento que se encuentra entre los índices de una lista
+# lista=['a','b']
+# lista[1]='c'
+# print(lista)
+
+# #No podemos modificar o agregar un valor en una posición (índice) que no está en la lista
+# lista=['a','b']
+# lista[2]='c'
+# print(lista) ##arrojará un error indicando que el indice en la lista está fuera del rango
+
+# #Para añadir elementos a una lista podemos hacer una concatenación
+# lista=[1,2]
+# lista=lista+[3,4] #o también lista+=[3,4]
+
+# #O también podemos utilizar el método APPEND()
+# lista=['a','b']
+# lista.append('c')
+# print(lista)
+
+
+# #Para recorrer una lista, podemos usar el método directo
+# dias=['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sábado']
+# for i in dias:
+#   print(i)
+
+# #O también el método indirecto
+# dias=['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sábado']
+# for i in range(7):
+#   print(dias[i]) #Recorremos los elementos en la lista haciendo uso del control de iteración (la variable i en este caso) que se utiliza para movernos en cada uno de los índices del vector
+
+
+# #Para movernos en una matriz, hacemos uso de un ciclo for anidado. El primer ciclo se recorrerán cada una de las filas que componen la matriz, en este caso, la primera que contiene las cadenas nota1, nota2 y nota3 y 3.5, 4.0 y 3.0 respectivamente.
+# matriz=[['nota1','nota2','nota3'],[3.5,4.0,3.0]]
+
+# for i in range(2): 
+#   for j in range(3):
+#     print(f'{matriz[i][j]}|\t\t',end=' ')
+#   print('')
+
+# #Para conocer el tamaño de una lista usamos la función len
+# lista=('a',1,'b',2,True,False,[4,5],{'Nombre':'Ronald','Edad':36})
+# print(len(lista))#Esta lista tiene 8 elementos
+
+# #Para eliminar un elemento de una lista, usamos del
+# lista=('a',1,'b',2,True,False,[4,5],{'Nombre':'Ronald','Edad':36})
+# del (lista[1]) #Elimina el elemento en el índice 1
+# print(lista)
+
+
+'''
+Diseñar un algoritmo que lea 10 números y los guarde en un vector
+'''
+# lista=[] #Creamos una lista vacía
+# for i in range(10): #Usamos el for para recorrer la tupla creada por el range
+#     num=int(input('Digita un número ')) #Convertimos y almacenamos un número en la variable num
+#     lista.append(num) #Con el método append agregamos el valor de la variable número a la lista
+#    #Podemos también realizarlo de la siguiente manera: 
+#    # lista.append(int(input('Digita un numero ')))
+# print(lista)
+
+# def saludar(nombre):
+#     print('Hola',nombre)
+
+
+'''
+Introducción a funciones
+Una función es un bloque de código que solo se ejecutará cuando sea necesario. Para crear este bloque de código usamos la palabra reservada
+def seguido del nombre de la función y paréntesis. En en el cual podemos colocar o no parámetros.
+
+Para ejecutar la función, escribimos el nombre de la función seguido de paréntesis.
+'''
+# # Ejemplo
+# # Crear una función que diga hola
+
+# def saludar():
+#     print('Hola')
+
+# saludar()
+
+# # En la pantalla aparecerá Hola.
+
+# Si no escribimos la llamada a la función => saludar(), nunca aparecería ese mensaje en la pantalla.
+
+# # Podemos también hacer uso de parámetros/argumentos
+
+# def saludar(nombre):
+#     print('Hola',nombre)
+
+# saludar('Pedro')
+
+# # En la pantalla aparecerá Hola Pedro
+
+
+# # Podemos pasar el argumento/parámetro almacenado en una variable.
+
+# persona=input('Digita el nombre de la persona ')
+# def saludar(nombre):
+#     print('Hola',nombre)
+# saludar(persona)
+
+
+#Las variables que se crean dentro de una función, solo existen dentro de esa función
+
+# def sumar(val1,val2):
+#     suma=val1+val2
+# print(sumar) #Si tratamos de usar la variable suma, nos aparecerá un error indicando que la variable no ha sido definida
+
+# def sumar(val1,val2):
+#     suma=val1+val2
+#     print(suma)
+
+# sumar(1,2) 
+
+
+# #Para poder tener acceso a la información de una variable en una función, es necesario, hacer uso de return
+# def sumar(val1,val2):
+#     resultado=val1+val2
+#     return resultado
+
+# print(sumar(1,2))
+
+
+'''MÉTODOS(función) DE LISTAS'''
+# #count =>función que permite contar las veces que aparece un determinado elemento en una lista
+# lista=[1,3,5,7,9,2,4,6,8,10,1]
+# print(lista.count(11)) #Buscar cuantas veces aparece el número 11 en la lista, el resultado será 0
+# print(lista)
+
+# #extend, es una función que permite unir 2 listas
+# lista=[1,3,5,7,9,2,4,6,8,10,1]
+# lista2=['a','b','c','d','e']
+# lista.extend(lista2) #se une la lista2 a la lista 1
+# print(lista2)
+# print(lista)
+
+
+# # Cuando asignamos el valor de una lista tomándolo de otra lista, sucederá que como lo que hacemos es apuntar a la dirección de memoria de la lista, lo que hagamos en una, sucederá en la otra
+# lista1=[1,2,3]
+# lista2=lista1 #"copiamos" lista1 en lista2
+# print('---------------------')
+# print(id(lista1)) #La función id nos muestra la dirección de memoria que se está usando para la variable
+# print(id(lista2))#La función id nos muestra la dirección de memoria que se está usando para la variable
+# print('---------------------')
+# #Si nos damos cuenta, la dirección es la misma en ambos casos
+# print('Lista 1',lista1)
+# print('Lista 2',lista2)
+# lista2+=[4] #añadimos un elemento a lista 2
+# print('------------')
+# print('Lista 1',lista1) #Vemos que en la lista 1, también aparece el elemento
+# print('Lista 2',lista2)
+
+
+# '''EXPLICAR 27-01-23'''
+# lista3=[1,2,3]
+# lista4=lista3[:]
+# print(f'lista3 {lista3}')
+# print(f'lista4 {lista4}')
+# # print(id(lista3))
+# # print(id(lista4))
+# lista3.append(4)
+# print(f'lista3 {lista3}')
+# print(f'lista4 {lista4}')
+
+'''
+Generar 10 números aleatorios en un rango de 1 a 10 y ponerlos dentro de una lista, sumar dichos valores.
+'''
+# suma=0
+# import random
+# lista=[]
+# for i in range(10):
+#     lista.append(random.randint(1,10))
+# for j in range(10):
+#     suma+=lista[j]
+# print(lista)
+
+'''
+Mostrar el valor más grande dentro de un lista, sin usar métodos o funciones.
+'''
+# mayor=lista[0]
+# for i in range(10):
+#     if lista[i]>mayor:
+#         mayor=lista[i]
+# print(mayor)
+
+
+
+
+'''
+MÉTODOS DE LISTAS: https://docs.hektorprofe.net/python/metodos-de-las-colecciones/metodos-de-las-listas/
+'''
+
+'''
+4.	Crear un programa con un menú de opciones. La opción 1 permitir cargar los nombres de 5 alumnos de un curso y las nota de programación de cada uno de ellos. La opción 2 mostrar la mayor nota y a que alumnos le correspondió esta nota. La opción 3 mostrar el listado de estudiantes con su nota. La opción 4 permitir salir del programa.
+'''
+# nombres=[] #Inicializo la lista de nombres vacía
+# notas=[] #inicializo la lista de notas vacía
+# salir=False #Inicializo mi variable salir en False. La utilizaré como bandera para que obligar al ciclo while a ejecutarse. Recuerde que los ciclos deben tener 3 elementos. Inicialización, Evaluación y Actualización.
+# while salir==False: #Evalúo si la variable salir todavía contiene el valor False
+#     menu=int(input('''
+#     --------MENU------------
+#     1. Ingresar estudiantes
+#     2. Ingresar notas
+#     3. Mayor nota
+#     4. Mostrar datos
+#     5. Salir
+#     Digita una opción: ''')) #Variable menú que nos permite escoger que tarea queremos realizar. Usamos el input para recibir un valor por teclado y usamos int para convertir ese valor en un número entero. Si el valor escrito y convertido no está en la lista, se aplicará la opción "_" de mi menú
+#     match menu: #condicional match (switch)
+#         case 1: #case 1 evaluar que el valor en la variable menú convertido en entero tenga el valor 1
+#             for i in range(5): #ciclo que recorrerá la cantidad de elementos indicados
+#                 nombres.append(input(f'Digita el nombre del {i+1} estudiante ')) #append, es el método para agregar elementos a una lista (array). Podemos asignar el dato que se capture con la función input
+#         case 2:
+#             for i in range(5):
+#                 notas.append(float(input(f'Digita la nota del {i+1} estudiante ')))
+#         case 3:
+#             mayor=max(notas) #función max, obtiene el valor más alto de un conjunto de valores
+#             for i in range(5):
+#                 if notas[i]==mayor: #se compara el valor en la posición actual de notas[i] contra el valor almacenado en la variable mayor
+#                  print(f'Estudiante {nombres[i]}: {notas[i]}') #Se imprime el valor en lista nombres[i] y notas[i]
+         
+#             # mayor=notas[0] # Otro método sería establecer el valor mayor en el primer elemento
+#             # for i in range(5): 
+#             #     if notas[i]>mayor: #comparar el elemento en la posición actual del ciclo con el valor almacenado en la variable
+#             #         mayor=notas[i] #Si el valor en la posición actual es más grande que el valor de la variable mayor, entonces se le reasigna el valor de la posición actual
+#             # for i in range(5):
+#             #     if notas[i]==mayor: #Se compara si el elemento en la posición actual es igual a la nota mayor que salió del proceso anterior
+#             #         print(f'{nombres[i]}:{notas[i]} ') #Se imprime el nombre y la nota en la posición actual
+#         case 4:
+#             for i in range(5):
+#                 print(f'Estudiante {nombres[i]}: {notas[i]}')
+#                 #Cicclo recorre e imprime cada estudiante con su nota
+#         case 5:
+#             salir=True #Se cambia el valor de mi variable salir a True para que no se ejecute más el ciclo while
+#             print('Adios')
+#         case otro: #El case con nombre otro, puede recibir cualquier nombre (cualquiera, ninguno, diferente, etc.) por lo general podemos encontrarlo con el guión bajo (_)
+#             print('Opcion no disponible')
+#             print('------------------------')
+
+'''
+
+3.	Se desea llenar una lista con 10 animales, y le han pedido a usted que sabe programar que les ayude para solicitar esos 10 nombres, mostrarlos ordenados alfabéticamente, Luego solicitar al usuario un número entre el 1 y el 10 y que le permita ver cuales animales se encuentra entre el número dicho y el final de la lista. También cree una opción que permita al usuario escribir el nombre de un animal y verificar si ese animal se encuentra en la lista.
+
+'''
+# #Aunque el enunciado no establece en forma explícita que se debe realizar un menú, es valido hacerlo en forma secuencial.
+# animales=[] #Lista de animales vacía
+# salir=False #Inicialización ->bandera para ejecutar el ciclo while
+# while salir==False: #Evaluación -> verifico que la variable salir contiene el valor False en cada ciclo. Si es False se ejecuta nuevamente el ciclo.
+#     menu=int(input(''' 
+#     --------------MENU-----------------
+#     1. Llenar lista
+#     2. Ordenar lista
+#     3. Ver desde la posición N
+#     4. Buscar Animal
+#     5. Salir
+#     Digita una opción: '''))
+#     match menu: 
+#         case 1: 
+#             for i in range(5):
+#                 animales.append(input(f'Digita el nombre del {i} animal ')) #usamos método append para añadir cada animal a la lista
+#         case 2:
+#             animales.sort() #ordenamos la lista de animales
+#             print(animales) #imprimimos la lista
+#         case 3: 
+#             pos=int(input('Digita la posición desde la que desea ver ')) #variable que almacena la posición desde la cual el usuario quiere visualizar la lista de animales
+#             if pos>0 and pos<=10: #Evaluamos si el número escrito por el usuario es un valor valido
+#             #     for i in range(pos-1,len(animales)): #podemos establecer un ciclo for desde la posición dada por el usuario -1, ya que generalmente los usuarios cuentan desde el 1 y no desde el 0; hasta el tamaño de la lista de animales, por eso aplicamos la función len
+#             #         print(animales[i]) #Se imprime los animales que corresponden al rango
+#                 print(animales[pos-1:])#Imprimos la lista con los corchetes, desde la posición dada -1, hasta el final.
+#         case 4: 
+#             animal=input('Digita el animal que buscas ') #Almacenamos el nombre del animal que el usuario busca
+#             cont=0 #usamos contador para evaluar si se encontró el animal alguna vez
+#             for i in range(len(animales)):#Recorremos la lista completa
+#                 if animal.lower()==animales[i].lower(): #Convierto a minúscula el animal escrito por el usuario, como los animales que se encuentran en la lista
+#                     cont+=1 
+#             if cont>=1:#Evaluamos si el animal aparece 1 o más veces
+#                 print('Si está')
+#             else: #De lo contrario, significa que el contador no cambió su valor
+#                 print('No está')
+
+#             # if animal in animales: #Con in verificamos si algo está en la lista
+#             #     print('Si está')
+#             # else:
+#             #     print('No está')
+#         case 5:
+#             salir=True
+#             print('Adios')
+#         case _:
+#             print('Opcion no disponible')
+
+
+
+'''
+4.	Dado el siguiente arreglo=[1,0,4,8,5,7,6,8,7,5,6,4,3,1,9,2], dar la opción al usuario de indicar un número a buscar y mostrar la posición en que se encuentra un número por primera vez y por última vez dentro del arreglo.
+'''
+# lista=[1,0,4,8,5,7,6,8,7,5,6,4,3,1,9,2]
+# numero=int(input('Que número buscas'))
+# for i in range(len(lista)-1,-1,-1):
+#     if lista[i]==numero:
+#         print(f'{numero} está en la posición {i} por últiva vez')
+#         break
+
+# for i in range(len(lista)):
+#     if lista[i]==numero:
+#         print(f'{numero} está en la posición {i} por primera vez')
+#         break
+
+'''
+Otra solución propuesta por Johan Galvis
+'''
+# lista=[1,0,4,8,5,7,6,8,7,5,6,4,3,1,9,2]
+# primera=-1 #Variable que servirá como bandera
+# ultima=-1 #Variable que servirá como bander
+# numero=int(input('Digita un número a buscar '))
+# for i in range(len(lista)):
+#     if lista[i]==numero: #Se evalúal si el número indicado está en la lista
+#         if primera==-1: #Si el número está en la lista, se evalúa si la variable primera todavía tiene el valor -1
+#             primera=i #Se asigna el valor de i (servirá como indice) a la variable primera
+#         ultima=i #Se asignad el valor de i (si el número está en la lista se cambia el valor de última) a la variable última
+# if primera==-1 or ultima==-1: #Si primera y última no cambiaron, es por que el número no está en la lista
+#     print('El elemento no se encuentra en la lista')
+# else:    #Se imprime el valor de primera y última
+#     print(f'Primera aparición: {primera}, última aparición {ultima}')
+
+
+
+'''
+	Sumar los valores del siguiente arreglo numeros=[33,55,77,81,48]  mostrar al final del programa los número en forma de lista y el resultado de la suma.
+'''
+# numeros=[33,55,77,81,48]
+# for i in numeros:
+#     print(i)
+# print('Total: ',sum(numeros))
+
+# suma=0
+# for i in range(len(numeros)):
+#     suma+=numeros[i]
+#     print(i)
+# print('Total: '+ str(suma))
+
+'''
+5.	Un usuario desea ingresar al sistema y se solicita los datos de usuario y contraseña. Los datos de usuario y contraseña se encuentran almacenados en dos arreglos respectivamente. Verificar si el usuario y la contraseña coinciden con los que se encuentran almacenados (un usuario tiene una contraseña que se corresponde respectivamente). Si ambos son correctos (La coincidencia debe ser exacta), mostrar el mensaje bienvenido. De lo contrario, mostrar un mensaje indicando que hay un error. Dar un máximo de 3 oportunidades.
+'''
+# usuarios=['pepito89','supermongui','espernancacion']
+# contrasenas=['123456','password','querty123']
+# oportunidades=3 #Variable que contiene la cantidad de oportunidades ->Utizada para la inicialización
+# while oportunidades>0: #Evaluamos que la variable oportunidades sea mayor que 0
+#     user=input('Digite usuario ').lower() #Convertimos a minúscula lo que el usuario digita y lo guardamos en user
+#     password=input('Digita el password')#Almacenamos lo que el usuario escribe en password
+#     if user in usuarios: #verificamos si el user escrito está en la lista de usuarios
+#         if password in contrasenas: #verificamos si el password escrito está en la lista de contraseñas
+#             if usuarios.index(user)==contrasenas.index(password): #Evaluamos si ambos valores están en la misma posición de la lista
+#                 print('Bienvenido')
+#                 oportunidades=0 #actualizamos la variable ooportunidades a 0 para que no se ejecute más el while
+#             else:
+#                 print('Error de usuario o contraseña')
+#         else:
+#             print('Error de usuario o contraseña')
+#     else: print('Error de usuario o contraseña')
+#     oportunidades-=1 #actualizamos la variable oportunidades (cuando sea 0 o menos) el ciclo while no se vuelve a ejecutar.
+
+
+
+'''
+Llenar una matriz de tamaño 5 filas x 10 columnas con los númerost del 1 hasta el 50 en forma automática.
+'''
+# matriz=[] #Creamos una lista vacía. 
+# cont=0 #Podemos hacer uso de un contador para ayudarnos a calculcar el valor de cada posición
+# for fila in range (5): #El iterador de este ciclo lo llamaremos fila para poder entender a que se refiere. Nuestra matriz debe tener 5 filas para cumplir el requisito indicado.
+#   matriz.append([]) #Como nuestra lista(variable matriz) está vacía, agregaremos una lista (una nueva fila)
+#   for columna in range(10):#El iterador de este ciclo lo llamares columna para entender a que se refiere. Nuestra matriz debe tiene 10 columnas para cumplir el requisito indicado
+#     matriz[fila].append(cont+columna+1) #Este método agrega una valor en la fila actual, el cual se obtiene de sumar el valor de la variable contador sumado con el valor actual del iterador columna +1 (0+0+1=1, 0+1+1=2, 0+2+1=3, 0+3+1=4....),(10+0+1=11, 10+1+1=12, 10+2+1=13, 10+3+1=14....),20+0+1=21, 20+1+1=22, 20+2+1=23, 0+3+1=24....
+
+#     # Solución Sebastian
+#     # matriz[fila].append(cont+1)
+#     # cont+1 
+
+#     # Aporte de Bryan
+#     # matriz[fila].append((columna+1)+(fila*10))
+#     #Este método no usa contador. Utiliza el valor del iterador columna y el iterador fila. ((0+1)+(0*10))=1, ((1+1)+(0*10))=2,((2+1)+(0*10))=3...
+#     #((0+1)+(1*10))=11, ((1+1)+(1*10))=12, ((2+1)+(1*10))=13... ((0+1)+(2*10))=21,((1+1)+(2*10))=22, ((2+1)+(2*10))=23... 
+    
+#   cont+=columna+1 #Aporte de Christian -> Se incrementa el valor del contador con el valor final del iterador columna+1 (0+9+1=10,10+9+1=20,20+9+1=30,30+9+1=40)
+
+
+# for fila in range(len(matriz)):#Recorremos la lista con el tamaño de la misma
+#     print('[',end='') #imprimimos [ sin saltar de línea
+#     for columna in range(len(matriz[fila])):#Recorremos el tamaño de la lista en cada fila
+#         if columna<len(matriz[fila])-1: #Evaluamos si la posición es antes de la última
+#             print(matriz[fila][columna],end='\t ')#imprimimos el elemento en la posición fila y columna de la lista con tabulación
+#         else:
+#            print(matriz[fila][columna],end='') #imprimimos el elemento en la posición fila y columna de la lista sin tabulación
+#     print(']',end='') #imprimos el ] sin saltar
+#     print('') #imprimimos en blanco (salta de línea)
+
+'''
+2.	Dada una matriz de m*n diseñar un algoritmo para sumar cada una de las filas y guardar los resultados en un vector llamado sumafila, sumar cada una de las columnas y guardar los resultados en el vector sumacol, finalmente mostrar los dos vectores 
+4 filas y 6 columnas 
+[1  2   3   4   5   6]
+[7  8   9   10  11  12]
+[13 14  15  16  17  18]
+[19 20  21  22  23  24]
+'''
+# DECLARACIÓN DE VARIABLES
+# matriz=[]
+# sfila=[]
+# scolumna=[]
+# m=4
+# n=6
+
+# # LLENADO DE MATRIZ
+# cont=1
+# for fila in range(m):
+#     matriz.append([])
+#     for columna in range(n):
+#         matriz[fila].append(cont)
+#         cont+=1
+
+# # SUMA DE COLUMNAS
+# for columna in range(n):
+#     total=0
+#     for fila in range(m):
+#         total+=matriz[fila][columna]
+#     scolumna.append(total)
+
+# # SUMA DE FILAS
+# for fila in range(m):
+#     total=0
+#     for columna in range(n):
+#         total+=matriz[fila][columna]
+#     sfila.append(total)
+
+# # IMPRESIÓN DE MATRIZ
+# for fila in range(m):
+#     for columna in range(n):
+#         print(matriz[fila][columna],end='\t ',)
+#     print('\t',sfila[fila],end='') #Se imprime elemento con la suma de la fila
+#     print('')
+# print('')
+# for columna in range(n):
+#      print(scolumna[columna],end='\t ',) #Se imprime elemento con la suma de la columna
+
+
+
+# nombres=[]
+# n=int(input('Digita la cantidad de nombres que deseas registrar '))
+# for i in range(n):
+#     nombres.append(input(f'Digita el {i+1} nombre '))
+# # nombres2=nombres[:] 
+# nombres2=nombres.copy()
+# nombres2.sort()
+# # print('Lista ordenada',sorted(nombres))
+# print('Lista original',nombres)
+# print('Lista ordenado',nombres2)
+
+    
+''' Se desea hacer una actividad en la que se integrarán los estudiantes del equipo #1 y el equipo #2 de la Generación 3 COEX. Realice un algoritmo que permita leer la lista de 5 estudiantes del grupo#1 y leer la lista de 5 estudiantes del grupo#2 con su respectivo género (F o M) y luego formar una nueva lista que contenga solo los nombres de los estudiantes. '''
+
+# lista1=[[],[]] #Matriz que guardar nombres en la lista del indice 0 y guarda genero en la lista del indice 1
+# lista2=[[],[]]
+# lista3=[] #Lista vacía para guardar los nombres
+# for i in range(3):
+#     lista1[0].append(input(f'Escribe el nombre del {i+1} estudiante del equipo 1 ')) #Añado nombres a la lista en el indice 0. El método append se encargará de ir añadiendo cada uno en la lista (uno detrás del otro)
+#     lista1[1].append(input(f'Registra el genero de {lista1[0][i]} ')) #Añado generos a la lista en el indice 2. El método append se encargará de ir añadiendo cada uno en la lista (uno detrás del otro)
+
+# for i in range(3): #Hacemos los mismo que con la lista 1
+#     lista2[0].append(input(f'Escribe el nombre del {i+1} estudiante del equipo 2 '))
+#     lista2[1].append(input(f'Registra el genero de {lista2[0][i]} '))
+
+
+# ''' import numpy as np 
+# Para poder usar el numpy, tuve que instalar la biblioteca con pip install numpy
+# '''
+# lista3.extend((lista1[0],lista2[0])) #Tomamos los elementos de la lista1 en la lista del indice o que contiene los nombres, al igual que la del 2 y la añadimos a la lista3
+# ''' 
+# lista3=np.array(lista3)
+# Este método lo que hará es quitar los [[],[]] que quedaron en el extend dejando solo []
+# '''
+
+# print(lista3)#Imprimimos la lista 3 que contiene todos los datos. La salida será [[a,b,c,d,e],[f,g,h,i,j]]
+# '''print(lista3.flatten())   
+# El método flatten entregará la lista aplanada. La salida sera [a,b,c,d,e,f,g,h,i,j]
+# '''
+
+'''4.	Diseñar un algoritmo que almacene datos en dos vectores y luego identifique y muestre los elementos que están en el primero y no están en el segundo.
+'''
+# #Método 1. Usando posición del elemento.
+# lista1=[1,'a',2,'b',3]
+# lista2=['c','d',4,5,6,1]
+
+# for i in range(len(lista1)): #recorre un rango con el tamaño de la lista
+#     cont=0 #contando que se reinicia a 0 en cada ciclo
+#     for j in range(len(lista2)): #recorro la otra lista
+#         if lista1[i]==lista2[j]: #Comparo si hay algún elemento repetido
+#             cont+=1 #Aumento en contador
+#     if cont==0: #al finalizar el ciclo, si el elemento no modificó el contador, significa que no existe en la otra lista
+#         print(lista1[i]) #Se imprime
+
+# # Método 2. recorriendo los elementos
+# lista1=[1,'a',2,'b',3]
+# lista2=['c','d',4,5,6,1]
+# for i in lista1: #Se recorren los elementos de la lista1
+#     cont=0
+#     for j in lista2: #Se recorren los elementos de la lista2
+#         if i==j:
+#             cont+=1 
+#     if cont==0: #Al igual que la versión anterior, si el contador no se modificó es por que está en la otra lista.
+#         print(i)
+
+# #Método 3 haciendo uso de la función c y la diferencia de conjuntos
+# lista1=[1,'a','b',3,'c']
+# lista2=['a','b',1,2,3]
+# a=set(lista1) #Función set convierte la lista en un set y elimina elementos repetidos de la lista (no tenía repetidos)
+# b=set(lista2) #Función set convierte la lista en un set y elimina elementos repetidos de la lista (no tenía repetidos)
+# c=a-b #Aquí se aplica una diferencia de conjuntos, se busca lo que está en a, pero no está en c. Funciona porque las listas fueron convertidas en set.
+# print(f'final {c}')
+# '''URL(https://j2logo.com/python/tutorial/tipo-set-python/)'''
+
+'''
+8.	Dadas las siguientes ciudades y la temperatura de los próximos 5 días. Realice un algoritmo que permita obtener la temperatura promedio, la mayor y menor de cada ciudad.
+Bogota='19,19,17,18,20'
+Bucaramanga='27,26,26,26,27'
+Medellin='27,26,26,27,29'
+'''
+# # Declaración en inicialización
+# Bogota='19,19,17,18,20' #Se asigna una cadena con varios elementos a la variable
+# Bucaramanga='27,26,26,26,27'
+# Medellin='27,26,26,27,29'
+
+# #Separamos elementos y se convierte en lista
+# Bogota=Bogota.split(sep=',') #función split, toma una cadena y la divide en partes más pequeñas. Para saber en que momento se debe cortar la cadena, usará el caracter indicado en el argumento/parámetro sep.
+# Bucaramanga=Bucaramanga.split(sep=',')
+# Medellin=Medellin.split(sep=',')
+# '''
+# Para leer un poco sobre esto, mire el siguiente enlace
+# url https://j2logo.com/python/split-dividir-un-string-en-python-en-tokens/'''
+
+# #Convertimos en entero cada elemento usar compresión de listas
+# Bogota=[int(ele) for ele in Bogota]
+# Medellin=[int(ele) for ele in Medellin]
+# Bucaramanga=[int(ele) for ele in Bucaramanga]
+
+# '''
+# Para leer un poco sobre esto, mire el siguiente enlace
+# https://blog.finxter.com/como-convertir-una-lista-de-cadenas-en-una-lista-de-enteros-en-python/
+# '''
+# #****Convertimos en entero cada elemento usando función MAP (Considero que este método es mucho más simple de interpretar*****)
+# # Bucaramanga=list(map(int,Bucaramanga))
+# # Bogota=list(map(int,Bogota))
+# # Medellin=list(map(int,Medellin))
+
+# '''
+# Para leer un poco sobre esto, mire el siguiente enlace
+# https://blog.finxter.com/como-convertir-una-lista-de-cadenas-en-una-lista-de-enteros-en-python/
+# '''
+# # Imprimimos los datos solicitados. max entrega el maximo valor de la lista. min entrega el valor mínimo de la lista, sum suma los elementos de la lista y luego es divido en len que es tamaño de la lista
+
+# print(f'Bogota max: {max(Bogota)} min: {min(Bogota)} Promedio: {sum(Bogota)/len(Bogota)}')
+# print(f'Bucaramanga max: {max(Bucaramanga)} min: {min(Bucaramanga)} Promedio: {sum(Bucaramanga)/len(Bucaramanga)}')
+# print(f'Medellin max: {max(Medellin)} min: {min(Medellin)} Promedio: {sum(Medellin)/len(Medellin)}')
+
+
+
+'''
+10.	La escuela, PequeñosGamberros, quiere almacenar los datos de sus N estudiantes: Nombre, Curso, Genero. Quiere también registrar las notas de las 3 materias de esos estudiantes. Luego imprimir el nombre de los estudiantes con el promedio de sus notas y mostrar quienes aprobaron y quienes no. Un estudiante aprueba, si el promedio de sus notas, es >=3.5. Debe tenerse en cuenta que las notas deben estar entre 0 y 5.
+
+Trabajar el lunes en clase.
+'''
+

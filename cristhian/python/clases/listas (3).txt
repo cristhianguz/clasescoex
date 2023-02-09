@@ -1,0 +1,214 @@
+'''
+LISTAS EN PYTHON (ARREGLOS, DIMENSIONES, VECTORES, MATRICES)
+
+Las listas (arreglos) son estructuras que permiten agrupar datos para facilitar su manejo en la memoria del computador y realizar operaciones que requieren tener acceso a conjuntos de datos al tiempo, como: buscar y ordenar. 
+
+Se entiende como lista (arreglo) una colección de elementos, almacenados en direcciones seguidas de memoria a los cuales se hace referencia con un mismo identificador o nombre, pero se distinguen entre sí mediante un índice que representa la posición de cada elemento dentro de la estructura.
+
+Ejemplo
+Estudiantes=['Pepito','Pablito','Pedrito]
+Notas=[4.5,4.7,4.6]
+
+El uso de arreglos es fundamental cuando se requiere mantener en memoria y operar muchos datos.
+
+REPRESENTACIÓN GRÁFICA DE UN VECTOR
+URL: https://javiergarciaescobedo.es/images/stories/apuntes/arrays01.jpg
+
+Lista  = ['a','b','c','d'] =>cada una de las letras es un Elemento
+           0   1   2   3   Posición (Índice)
+
+En programación, los índices de una lista inician en 0
+
+Una matriz es un conjunto de vectores
+URL: https://javiergarciaescobedo.es/images/stories/apuntes/arrays02.jpg
+
+matriz = ['a','b','c','d']
+         ['1','2','3','4']
+
+
+Para declarar una lista (vector o matriz) en python, escribimos, el nombre de la variable y colocamos el conjunto de datos dentro de corchetes ([]) y separados por comas (,)
+
+vector=[1,2,3]
+matriz=[['a','b','c'],[1,2,3]]
+
+Podemos mostrar lo que hay en una posición específica de un vector o matriz, usando su indice.
+Ejemplo
+si tengo la lista vector=[1,2,3] y quiero acceder al elemento que tiene valor 3, escribimos vector[2], ya que teniendo en cuenta los indices, el índice cero le corresponde al valor (elemento) 1, el índice 1, le corresponde al valor (elemento) 2 y el índice 2, le corresponde al valor (elemento) 3.
+
+Si tengoa la lista matriz=[['a','b','c'],[1,2,3]] y quiero acceder al elemento b, entonces escribimos matriz[0][1], ya que entre los elementos de la lista matriz, en el primer elemento que está en el índice cero, dentro de este hay una lista que el índice 1 contiene la letra b.
+'''
+# #Podemos imprimir el contenido de un lista
+# lista=[1,2]
+# print(lista)
+
+# #Podemos imprimir un elemento de una lista
+# lista=[1,2]
+# print(lista[0])
+
+# #No podemos acceder a una posición que no existe en una lista
+# lista=['a','b']
+# print(lista[2]) #arrojará un error indicando que el indice en la lista está fuera del rango
+
+# #Podemos modificar el valor de un elemento que se encuentra entre los índices de una lista
+# lista=['a','b']
+# lista[1]='c'
+# print(lista)
+
+# #No podemos modificar o agregar un valor en una posición (índice) que no está en la lista
+# lista=['a','b']
+# lista[2]='c'
+# print(lista) ##arrojará un error indicando que el indice en la lista está fuera del rango
+
+# #Para añadir elementos a una lista podemos hacer una concatenación
+# lista=[1,2]
+# lista=lista+[3,4] #o también lista+=[3,4]
+
+# #O también podemos utilizar el método APPEND()
+# lista=['a','b']
+# lista.append('c')
+# print(lista)
+
+
+# #Para recorrer una lista, podemos usar el método directo
+# dias=['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sábado']
+# for i in dias:
+#   print(i)
+
+# #O también el método indirecto
+# dias=['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sábado']
+# for i in range(7):
+#   print(dias[i]) #Recorremos los elementos en la lista haciendo uso del control de iteración (la variable i en este caso) que se utiliza para movernos en cada uno de los índices del vector
+
+
+# #Para movernos en una matriz, hacemos uso de un ciclo for anidado. El primer ciclo se recorrerán cada una de las filas que componen la matriz, en este caso, la primera que contiene las cadenas nota1, nota2 y nota3 y 3.5, 4.0 y 3.0 respectivamente.
+# matriz=[['nota1','nota2','nota3'],[3.5,4.0,3.0]]
+
+# for i in range(2): 
+#   for j in range(3):
+#     print(f'{matriz[i][j]}|\t\t',end=' ')
+#   print('')
+
+# #Para conocer el tamaño de una lista usamos la función len
+# lista=('a',1,'b',2,True,False,[4,5],{'Nombre':'Ronald','Edad':36})
+# print(len(lista))#Esta lista tiene 8 elementos
+
+# #Para eliminar un elemento de una lista, usamos del
+# lista=('a',1,'b',2,True,False,[4,5],{'Nombre':'Ronald','Edad':36})
+# del (lista[1]) #Elimina el elemento en el índice 1
+# print(lista)
+
+
+'''
+Diseñar un algoritmo que lea 10 números y los guarde en un vector
+'''
+# lista=[] #Creamos una lista vacía
+# for i in range(10): #Usamos el for para recorrer la tupla creada por el range
+#     num=int(input('Digita un número ')) #Convertimos y almacenamos un número en la variable num
+#     lista.append(num) #Con el método append agregamos el valor de la variable número a la lista
+#    #Podemos también realizarlo de la siguiente manera: 
+#    # lista.append(int(input('Digita un numero ')))
+# print(lista)
+
+# def saludar(nombre):
+#     print('Hola',nombre)
+
+
+'''
+Introducción a funciones
+Una función es un bloque de código que solo se ejecutará cuando sea necesario. Para crear este bloque de código usamos la palabra reservada
+def seguido del nombre de la función y paréntesis. En en el cual podemos colocar o no parámetros.
+
+Para ejecutar la función, escribimos el nombre de la función seguido de paréntesis.
+'''
+# # Ejemplo
+# # Crear una función que diga hola
+
+# def saludar():
+#     print('Hola')
+
+# saludar()
+
+# # En la pantalla aparecerá Hola.
+
+# Si no escribimos la llamada a la función => saludar(), nunca aparecería ese mensaje en la pantalla.
+
+# # Podemos también hacer uso de parámetros/argumentos
+
+# def saludar(nombre):
+#     print('Hola',nombre)
+
+# saludar('Pedro')
+
+# # En la pantalla aparecerá Hola Pedro
+
+
+# # Podemos pasar el argumento/parámetro almacenado en una variable.
+
+# persona=input('Digita el nombre de la persona ')
+# def saludar(nombre):
+#     print('Hola',nombre)
+
+# saludar(persona)
+
+
+#Las variables que se crean dentro de una función, solo existen dentro de esa función
+
+# def sumar(val1,val2):
+#     suma=val1+val2
+# print(sumar) #Si tratamos de usar la variable suma, nos aparecerá un error indicando que la variable no ha sido definida
+
+# def sumar(val1,val2):
+#     suma=val1+val2
+#     print(suma)
+
+# sumar(1,2) 
+
+
+# #Para poder tener acceso a la información de una variable en una función, es necesario, hacer uso de return
+# def sumar(val1,val2):
+#     resultado=val1+val2
+#     return resultado
+
+# print(sumar(1,2))
+
+
+'''MÉTODOS(función) DE LISTAS'''
+# #count =>función que permite contar las veces que aparece un determinado elemento en una lista
+# lista=[1,3,5,7,9,2,4,6,8,10,1]
+# print(lista.count(11)) #Buscar cuantas veces aparece el número 11 en la lista, el resultado será 0
+# print(lista)
+
+# #extend, es una función que permite unir 2 listas
+# lista=[1,3,5,7,9,2,4,6,8,10,1]
+# lista2=['a','b','c','d','e']
+# lista.extend(lista2) #se une la lista2 a la lista 1
+# print(lista2)
+# print(lista)
+
+
+# # Cuando asignamos el valor de una lista tomándolo de otra lista, sucederá que como lo que hacemos es apuntar a la dirección de memoria de la lista, lo que hagamos en una, sucederá en la otra
+# lista1=[1,2,3]
+# lista2=lista1 #"copiamos" lista1 en lista2
+# print('---------------------')
+# print(id(lista1)) #La función id nos muestra la dirección de memoria que se está usando para la variable
+# print(id(lista2))#La función id nos muestra la dirección de memoria que se está usando para la variable
+# print('---------------------')
+# #Si nos damos cuenta, la dirección es la misma en ambos casos
+# print('Lista 1',lista1)
+# print('Lista 2',lista2)
+# lista2+=[4] #añadimos un elemento a lista 2
+# print('------------')
+# print('Lista 1',lista1) #Vemos que en la lista 1, también aparece el elemento
+# print('Lista 2',lista2)
+
+
+'''EXPLICAR 27-01-23'''
+# lista3=[1,2,3]
+# lista4=lista3[:]
+# print(id(lista3))
+# print(id(lista4))
+
+
+
+
+

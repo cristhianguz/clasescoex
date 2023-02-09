@@ -1,0 +1,160 @@
+'''for i in range(0,5):
+    print(i+1)
+print('---------')
+i=1
+while i<=5:
+    print(i)
+    i=i+1'''
+
+'''numero=0
+residuo=0
+binario=''
+numero=int(input('escribe un numero'))
+while numero>0:
+    residuo=numero%2
+    binario=str(residuo)+binario
+    numero=numero//2
+print(f'binario {binario}')'''
+
+'''num=0
+suma=0
+num=int(input('digite numero '))
+for i in range(num+1):
+    suma=suma+i
+print(f'la sumatoria es {suma} ')'''
+
+'''num=0
+num=int(input('digite la tabla '))
+for i in range(1,11):
+    print(f'{num}*{i}={num*i}')'''
+
+'''t=1
+v=11
+while t<25:
+    t+=1
+    v+=11
+    print(v)'''
+    
+'''for i in range(8,500,8):
+    print(i)  '''
+
+'''x=8
+while x<=500:
+    print(x)
+    x+=8'''
+
+'''for i in range(10,0,-1):
+    print(i) '''
+
+'''i=10
+while i>0:
+    print(i)
+    i-=1'''
+
+
+'''num1=int(input('digite un numero '))
+num2=int(input('digite un numero '))
+for i in range(num1,num2+1):
+    par=i%2
+    if par==0:
+        print(i)
+        i+=1
+    else:
+        i+=1'''
+
+'''num=0
+suma=0
+while num!=9999:
+    num=int(input('digita un numero '))
+    if num!=9999:
+        suma+=num
+if suma>0:
+    print('mayor a 0 ')
+elif suma<0:
+    print('menor a 0 ')
+else:
+    print('igual a 0 ')
+print(suma)'''
+
+'''min=999999
+max=0
+suma=0
+cont=0
+num1=1
+while num1!=0:
+
+    num1=int(input('digite un numero '))
+    if cont==0:
+        max=num1
+    if num1!=0:
+        if num1>max:
+            max=num1
+        if num1<min:
+            min=num1
+    suma+=num1
+    cont+=1
+print(f'El mayor {max}')
+print(f' El menor{min}')
+print(f'Lamedia {suma/cont}' )'''
+
+'''for i in range(1,100,1):
+    if i%2==0 and i%3==0:
+        print(i)#print(i, end=', ')'''
+
+'''for i in range(1,101):
+    cont=0
+    for j in range(1,i+1):
+        if i%j==0:
+            cont+=1
+    if cont==2:
+        print(f'{i} es primo')'''
+
+
+#realizar un programa que lea los lados de 4 triangulos, e informar
+#de cada uno de ellos, que tipo de triangulo es: equilatero(tres lados iguales), isosceles(dos lados iguales),o escalemo(ningun lado igual)
+#cantidad de triangulos de cada tipo
+#tipo de triangulo del que hay menor cantidad
+
+'''tr1=0
+tr2=0
+tr3=0
+lad1=0
+lad2=0
+lad3=0
+cont1=0
+cont2=0
+cont3=0
+for i in range(4):
+    lad1=int(input('ingrese valor de lado1 '))
+    lad2=int(input('ingrese valor de lado2 '))
+    lad3=int(input('ingrese valor de lado3 '))
+    if lad1==lad2 and lad1==lad3 and lad3==lad2:
+        tr1=input('equilatero')
+        cont1+=1
+        print('el triangulo es {tr1} ')
+    elif lad1==lad2 and lad1==lad2 and lad2!=lad3:
+        tr2=input('isosceles')
+        cont2+=1
+        print('el triangulo es {tr2} ')
+    elif lad1!=lad2 and lad1!=lad3 and lad3!=lad2:
+        tr3=input('escaleno')
+        cont3+=1
+        print('el triangulo es {tr3} ')'''
+
+#imprimir un triangulo de numeros
+'''for i in range(1,6):
+    for j in range(1,i+1):
+        print(j,end=' ')
+    print(' ')'''
+
+'''for i in range(6,0,-1):
+    for j in range(1,i+1):
+        print(j,end=' ')
+    print(' ')'''
+
+#for i in range(0,6):
+#    for j in range(5,i,-1):
+#        print(j,end=' ')
+#    print(' ')
+
+

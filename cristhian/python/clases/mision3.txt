@@ -1,0 +1,94 @@
+talentos=[]
+codigo=[]
+mision1=[]
+mision2=[]
+mision3=[]
+prubafinal=[]
+promedioTalento=[]
+promedio=0
+salir=False
+while salir==False:
+    menu=int(input('''
+    --------MENU-------
+    1. Ingresar cantidad de talentos
+    2. Registrar datos de los talentos
+    3. Nota Mision 1
+    4. Nota Mision 2
+    5. Nota Mision 3
+    6. Prueba final
+    7. Nombre y nota del mejor talento de la Mision 1
+    8. Nombre y nota del mejor talento de la Mision 2
+    9. Nombre y nota del mejor talento de la Mision 3
+    10. Nombre y promedio de cada Talento 
+    11. Codigo nombre nota 1 nota 2 nota 3 prueba final
+    12. Desarrollado por: 
+    13. Salir
+    Digita una opcion: '''))
+    match menu:
+        case 1:
+            nTalentos=int(input('ingrese cantidad de talentos '))
+            
+        
+        case 2:
+            for i in range(nTalentos):
+                talentos.append(input(f'ingresa el nombre y codigo del {i+1} talento '))
+        
+        case 3:
+            for i in range(nTalentos):
+                mision1.append(int(input(f' ingresa nota de la mision 1 del {i+1} talento ')))
+
+        case 4:
+            for i in range(nTalentos):
+                mision2.append(int(input(f' ingresa nota de la mision 2 del {i+1} talento ')))
+
+        case 5:
+            for i in range(nTalentos):
+                mision3.append(int(input(f' ingrese nota de la mision 3 del {i+1} talento ')))
+
+        case 6:
+            for i in range(nTalentos):
+                prubafinal.append(int(input(f' ingresa nota de la prueba final de {i+1} talento  ')))
+
+        case 7:
+            mayor=max(mision1)
+            for i in range(nTalentos):
+                if mision1[i]==mayor:
+                    print(f' talento {talentos[i]}: {mision1[i]} ')   
+        
+        case 8:
+            mayor=max(mision2)
+            for i in range(nTalentos):
+                if mision2[i]==mayor:
+                    print(f'talento {talentos[i]}: {mision2[i]} ')
+        
+        case 9:
+            mayor=max(mision3)
+            for i in range(nTalentos):
+                if mision3[i]==mayor:
+                    print(f'talento {talentos[i]}: {mision3[i]} ')
+        
+        case 10:
+            for i in range(nTalentos):
+                while mision1>=0 and mision1<=100 and mision2>=0 and mision2<=100 and mision3>=0 and mision3<=100:
+                    print('Notas correctas ')
+            promedio=(mision1+mision2+mision3+prubafinal)/4
+            promedioTalento.append(promedio)
+        
+        case 11:
+            for i in range(nTalentos):
+
+                print(f'{talentos}, {mision1}, {mision2}, {mision3}, {prubafinal}  ')
+
+        case 12:
+            print('desarrollado por cristhian guzman')
+        
+        case 13:
+            salir=True
+            print('Adios')
+        
+        case _:
+            print('Opcion no encontrada ')
+
+                                        
+
+
